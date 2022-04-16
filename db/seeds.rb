@@ -1,7 +1,61 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+# create test user, first week of program
+user = User.create!(full_name: 'Mike Lobman', current_week: 1)
+
+num = 1
+phase = 1 
+20.times do
+    Week.create!(num: num, phase: phase)
+    num = num + 1
+    if num%4 == 1
+        phase = phase + 1
+    end
+end
+
+
+ExSet.create!([
+    {
+        week_id: 1,
+        num: 1,
+        reps: 5,
+        percentage: 0.65
+    },
+    {
+        week_id: 1,
+        num: 2,
+        reps: 5,
+        percentage: 0.75
+    },
+    {
+        week_id: 1,
+        num: 3,
+        reps: 5,
+        percentage: 0.85
+    }
+
+])
+
+MainEx.create!([
+    {
+        title: 'Bench Press',
+        upper_lower: 'upper'
+    },
+    {
+        title: 'Squat',
+        upper_lower: 'lower'
+    },
+    {
+        title: 'Deadlift',
+        upper_lower: 'lower'
+    },
+    {
+        title: 'Military Press',
+        upper_lower: 'upper'
+    }
+])
+
+MaxWeight.create!(
+    main_ex_id: 1,
+    user_id: 1,
+    reps: 6,
+    weight: 185
+)
