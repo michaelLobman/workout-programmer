@@ -5,10 +5,6 @@ class MaxWeightSerializer < ActiveModel::Serializer
     MainEx.find(self.object.main_ex_id).title
   end
 
-  # def max 
-  #   nearest_five(self.object.weight * self.object.reps * 0.0333 + self.object.weight)
-  # end
-
   # def w_max
   #   nearest_five(self.object.max * 0.9)
   # end
