@@ -1,5 +1,9 @@
 # create test user, first week of program
-user = User.create!(full_name: 'Mike Lobman', current_week: 1)
+user = User.create!(
+    full_name: 'Mike Lobman', 
+    username: 'mlobman',
+    password: 'admin',
+    current_week: 1)
 
 num = 1
 phase = 1 

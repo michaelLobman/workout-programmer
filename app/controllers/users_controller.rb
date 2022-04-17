@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     # do i need current week here? Or can that be supplied by the backend?
 
     def user_params
-        params.permit(:full_name, :current_week)
+        params.permit(:username, :password, :full_name, :current_week)
     end
 
     def find_user

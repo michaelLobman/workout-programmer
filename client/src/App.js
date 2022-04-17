@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-
-
 import Login from './pages/Login'
 // import Home from './pages/Home'
 
 function App(){
 
   const [user, setUser] = useState(null)
+
+  console.log(user)
 
   useEffect(() => {
     fetch("/me").then(r => {
@@ -16,10 +16,10 @@ function App(){
     });
   }, [])
 
-  if (!user) return <Login />
+  if (!user) return <Login setUser={setUser} />
 
   return (
-    <p>{user} logged in</p>
+    <p>{user.full_name} logged in</p>
     
   )
 }
