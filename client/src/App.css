@@ -5,3 +5,16 @@
 .form-group {
     padding: 2% 0;
 }
+
+#home-container {
+    width: 90%;
+    text-align: center;
+    padding: 2%;
+}
+
+#home-h1 {
+    padding: 2%;
+    margin: 1%;
+}
+
+

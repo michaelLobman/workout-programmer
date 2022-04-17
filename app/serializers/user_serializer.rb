@@ -1,5 +1,8 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :full_name, :username, :current_week
-
+  attributes :id, :name, :username, :current_week
   has_many :max_weights
+
+  def name
+    self.object.full_name.split[0]
+  end
 end

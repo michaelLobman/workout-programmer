@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home'
 import Login from './pages/Login'
-// import Home from './pages/Home'
 
 function App(){
 
@@ -19,8 +20,11 @@ function App(){
   if (!user) return <Login setUser={setUser} />
 
   return (
-    <p>{user.full_name} logged in</p>
-    
+    <Switch>
+      <Route exact path ='/'>
+        <Home user={user} setUser={setUser} />
+      </Route>
+    </Switch>    
   )
 }
 
