@@ -7,6 +7,8 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
+    
+
     def show
         user = find_user
         render json: user
