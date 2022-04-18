@@ -7,7 +7,11 @@ class MaxWeight < ApplicationRecord
     end
     
     def w_max
-        nearest_five(self.max * 0.9)
+        increment= self.main_ex.upper_lower == 'upper' ? 5 : 10
+        multiplier = self.user.current_week / 5
+        increase = increment * multiplier
+        
+        nearest_five((self.max * 0.9) + increase)
     end
     
     private
