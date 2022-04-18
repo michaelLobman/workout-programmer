@@ -57,9 +57,29 @@ MainEx.create!([
     }
 ])
 
-MaxWeight.create!(
-    main_ex_id: 1,
-    user_id: 1,
-    reps: 6,
-    weight: 185
-)
+MaxWeight.create!([
+    {
+        main_ex_id: 1,
+        user_id: 1,
+        reps: 6,
+        weight: 185
+    },
+    {
+        main_ex_id: 2,
+        user_id: 1,
+        reps: 4,
+        weight: 275
+    },
+    {
+        main_ex_id: 3,
+        user_id: 1,
+        reps: 4,
+        weight: 275
+    },
+    {
+        main_ex_id: 4,
+        user_id: 1,
+        reps: 4,
+        weight: 115
+    }
+])

@@ -21,3 +21,11 @@
     margin: 5% 0;
 }
 
+.set-button {
+    margin: 0 2%;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
