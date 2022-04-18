@@ -15,7 +15,6 @@ phase = 1
     end
 end
 
-
 ExSet.create!([
     {
         week_id: 1,
@@ -57,7 +56,7 @@ MainEx.create!([
     }
 ])
 
-MaxWeight.create!([
+Progression.create!([
     {
         main_ex_id: 1,
         user_id: 1,

@@ -3,8 +3,8 @@ import ExerciseItem from './ExerciseItem';
 
 function WorkoutAccordion({ user }){
 
-    const items = user.max_weights.map(max => (
-        <ExerciseItem user={user} key={max.id} maxObj={max} sets={user.week_sets} />
+    const items = user.progressions.map(progression => (
+        <ExerciseItem key={progression.id} progressionObj={progression} sets={user.week_sets} />
     ))
 
     return (

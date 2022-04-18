@@ -38,13 +38,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_18_195324) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "max_weights", force: :cascade do |t|
+  create_table "progressions", force: :cascade do |t|
     t.integer "main_ex_id"
     t.integer "user_id"
     t.integer "reps"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "weight"
+    t.integer "sets_completed"
   end
 
   create_table "users", force: :cascade do |t|

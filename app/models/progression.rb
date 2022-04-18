@@ -1,4 +1,4 @@
-class MaxWeight < ApplicationRecord
+class Progression < ApplicationRecord
     belongs_to :user
     belongs_to :main_ex
 
