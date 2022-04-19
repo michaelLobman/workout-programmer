@@ -1,12 +1,9 @@
-import { useState } from 'react';
-
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
-    const [disableButton, setDisableButton] = useState(false)
-    const { num, reps, percentage, week_id: week } = set
 
+    const { num, reps, percentage, week_id: week } = set
     const liftingWeight = Math.round(wMax * percentage / 5) * 5
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
     const variant = completed >= num ? 'success' : 'outline-success'
@@ -26,8 +23,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
         })
             .then(r => r.json())
             .then(data => setProgressions(data))
-
-        setDisableButton(!disableButton);
     }
 
     
