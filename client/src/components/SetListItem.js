@@ -11,6 +11,8 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     
     function handleClick(e){
         e.preventDefault();
+
+        console.log(`completed currently holds a value of ${completed}`)
         const data = {
             sets_completed: completed + 1
         }
@@ -23,6 +25,9 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
         })
             .then(r => r.json())
             .then(data => setProgressions(data))
+
+        console.log(`completed currently holds a value of ${completed}`)
+
     }
 
     
