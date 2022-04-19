@@ -19,7 +19,7 @@ function Home({ user, setUser}){
             <h1 id='home-h1'>Welcome, {user.name}</h1>
             <h2>You are currently on Week {user.current_week} of the program</h2>
             <ProgressBar animated variant='success' label={`${now}%`} now={now} />
-            <WorkoutAccordion user={user} />
+            <WorkoutAccordion user={user} setUser={setUser}/>
             <h2>Week {user.current_week} workouts:</h2>
                 {/* {workoutAccordions} */}
         </Container>
