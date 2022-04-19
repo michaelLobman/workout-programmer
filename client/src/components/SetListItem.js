@@ -10,7 +10,8 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     const liftingWeight = Math.round(wMax * percentage / 5) * 5
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
     const variant = completed >= num ? 'success' : 'outline-success'
-
+    const disable = completed >= num ? true : false;
+    
     function handleClick(e){
         e.preventDefault();
         const data = {
@@ -35,7 +36,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
             {reps} {amrap} reps @ {liftingWeight} pounds
             <Button 
                 className='set-button'
-                disabled={disableButton}
+                disabled={disable}
                 variant={variant} 
                 onClick={handleClick}
             >
