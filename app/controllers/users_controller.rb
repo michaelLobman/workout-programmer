@@ -7,12 +7,20 @@ class UsersController < ApplicationController
         render json: user, status: :created
     end
 
+    def next_week
+        user = find_user
+        reset_progressions(user)
+        user.update!(current_week: user.current_week + 1)
+        render json: user
+    end
+
     
 
     def show
         user = find_user
         render json: user
     end
+
 
     private
 
@@ -25,5 +33,10 @@ class UsersController < ApplicationController
     def find_user
         User.find(session[:user_id])
     end
+
+    def reset_progressions(user)
+        user.progressions.each{ |progression| progression.update!(sets_completed: 0) }
+    end
+    
 
 end

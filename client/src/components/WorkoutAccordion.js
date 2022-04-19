@@ -5,9 +5,10 @@ import ExerciseItem from './ExerciseItem';
 
 function WorkoutAccordion({ user }){
 
-    // trying to fetch progressions independent of user, that would need to be a function then.
-
     const [progressions, setProgressions] = useState([]);
+
+
+    // trying to fetch progressions independent of user, that would need to be a function then.
 
     useEffect(() => {
         fetch(`/progressions/user/${user.id}`)

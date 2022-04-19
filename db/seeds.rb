@@ -33,6 +33,24 @@ ExSet.create!([
         num: 3,
         reps: 5,
         percentage: 0.85
+    },
+    {
+        week_id: 2,
+        num: 1,
+        reps: 3,
+        percentage: 0.70
+    },
+    {
+        week_id: 2,
+        num: 2,
+        reps: 3,
+        percentage: 0.80
+    },
+    {
+        week_id: 2,
+        num: 2,
+        reps: 3,
+        percentage: 0.90
     }
 
 ])
