@@ -9,7 +9,9 @@ body {
 #intro-container {
     padding: 5% 0 ;
 }
-
+form {
+    text-align: center;
+}
 #progress-panel-div {
     /* background-color: rgb(141, 63, 63); */
     background-color: #dc3545;
@@ -20,18 +22,29 @@ body {
 
 input[type=text], input[type=number], input[type=password]{
     border: none;
-    border-bottom: 2px solid #dc3545;
+    /* border-bottom: 2px solid #dc3545; */
+    border-bottom: 2px solid black;
+    text-align:center;
     background-color: rgb(197, 201, 206);
     outline: none;
     box-shadow: none;
+    width: 20%;
+    margin: auto;
+    font-size: 2vw;
+}
 
+label {
+    font-size: 2vw;
 }
 
 input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
-    background-color: #dc3545;
+    /* background-color: #dc3545; */
     border: none;
-    color: white;
+    color: black;
+    /* color: white; */
     outline: none;
+    border-bottom: 2px solid #dc3545;
+    background-color: rgb(197, 201, 206);
     box-shadow: none;
 }
 
