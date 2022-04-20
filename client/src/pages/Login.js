@@ -14,6 +14,7 @@ function Login({ setUser }){
 
     return(
         <div>
+            <h1 id='login-h1'>Welcome to the Workout Programmer</h1>
             { showLogin ? (
                 <>
                     <LoginForm onLogin={setUser} />

@@ -1,3 +1,17 @@
+body {
+    /* background-color:rgb(181, 175, 175); */
+    background-color: rgb(197, 201, 206);
+    font-family: 'M PLUS 1', sans-serif;
+    font-weight: 500;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+#login-h1 {
+    color: rgb(169, 44, 44);
+    text-align: center;
+    margin: 4%;
+}
+
 .form-container {
     width: 100%;
 }

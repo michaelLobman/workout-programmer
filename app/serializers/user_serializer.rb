@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :current_week, :week_sets
+  attributes :id, :name, :username, :current_week, :phase, :week_sets
   has_many :progressions
 
 
@@ -15,6 +15,10 @@ class UserSerializer < ActiveModel::Serializer
       week_num = 4 unless week_num > 0
 
     ExSet.where(week_id: week_num).order(num: :asc)
+  end
+
+  def phase
+    Week.find(self.object.current_week).phase
   end
 
   def progressions
