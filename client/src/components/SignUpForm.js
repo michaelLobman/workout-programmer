@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import Intro from './Intro';
+
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -43,48 +45,51 @@ function SignUpForm({ onSignUp }){
     ))
 
     return(
-        <Container className='form-container'>
-            <Form id='signup-form' onSubmit={handleSubmit}>
-                <Form.Group className='form-group'>
-                    <Form.Label>Full Name</Form.Label>
-                    <Form.Control
-                        type='text'
-                        value={fullName}
-                        onChange={(e => setFullName(e.target.value))}
-                    />
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control
-                        type="text"
-                        value={username}
-                        onChange={(e => setUsername(e.target.value))}
-                    />
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type='password'
-                        value={password}
-                        onChange={(e => setPassword(e.target.value))}
-                    />
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    <Form.Label>Confirm Password</Form.Label>
-                    <Form.Control
-                        type='password'
-                        value={passwordConf}
-                        onChange={(e => setPasswordConf(e.target.value))}
-                    />
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    <Button type='submit' variant='danger'>Submit</Button>
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    {renderErrors}
-                </Form.Group>
-            </Form>
-        </Container>
+        <>
+            <Intro />
+            <Container className='form-container'>
+                <Form id='signup-form' onSubmit={handleSubmit}>
+                    <Form.Group className='form-group'>
+                        <Form.Label>Full Name</Form.Label>
+                        <Form.Control
+                            type='text'
+                            value={fullName}
+                            onChange={(e => setFullName(e.target.value))}
+                        />
+                    </Form.Group>
+                    <Form.Group className='form-group'>
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control
+                            type="text"
+                            value={username}
+                            onChange={(e => setUsername(e.target.value))}
+                        />
+                    </Form.Group>
+                    <Form.Group className='form-group'>
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type='password'
+                            value={password}
+                            onChange={(e => setPassword(e.target.value))}
+                        />
+                    </Form.Group>
+                    <Form.Group className='form-group'>
+                        <Form.Label>Confirm Password</Form.Label>
+                        <Form.Control
+                            type='password'
+                            value={passwordConf}
+                            onChange={(e => setPasswordConf(e.target.value))}
+                        />
+                    </Form.Group>
+                    <Form.Group className='form-group'>
+                        <Button type='submit' variant='danger'>Submit</Button>
+                    </Form.Group>
+                    <Form.Group className='form-group'>
+                        {renderErrors}
+                    </Form.Group>
+                </Form>
+            </Container>
+        </>
         
     )
 }
