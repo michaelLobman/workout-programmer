@@ -10,33 +10,18 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     const [ toggleChecked, setToggleChecked ] = useState(false)
     const liftingWeight = Math.round(wMax * percentage / 5) * 5
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
-    const toggleClass = toggleChecked ? 'green-background' : null
-
-    // function handleClick(e){
-    //     e.preventDefault();
-
-    //     console.log(`completed currently holds a value of ${completed}`)
-    //     const data = {
-    //         sets_completed: completed + 1
-    //     }
-    //     fetch(`/progressions/user/${userId}/${id}`, {
-    //         method: "PATCH",
-    //         headers: {
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify(data)
-    //     })
-    //         .then(r => r.json())
-    //         .then(data => setProgressions(data))
-
-    //     console.log(`completed currently holds a value of ${completed}`)
-
-    // }
+    const toggleClass = completed ? 'green-background' : null
 
     function handleChange(){
-        setToggleChecked(!toggleChecked)
         if (num === 3) {
+            setToggleChecked(!toggleChecked)
             console.log('this is the end')
+            fetch(`/progressions/user/${userId}/${id}`)
+                .then(r => r.json())
+                .then(data => setProgressions(data))
+        } else {
+            setToggleChecked(!toggleChecked)
+
         }
     }
 
@@ -49,6 +34,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
                 label='Completed'
                 checked={toggleChecked}
                 onChange={handleChange}
+                disabled={!!completed}
                 inline
             />
         </ListGroup.Item>

@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     end
 
     def reset_progressions(user)
-        user.progressions.each{ |progression| progression.update!(sets_completed: 0) }
+        user.progressions.each{ |progression| progression.update!(sets_completed: false) }
     end
     
 

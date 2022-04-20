@@ -9,7 +9,7 @@ class ProgressionsController < ApplicationController
 
     def update_user_progressions
         progression = find_progression
-        progression.update!(progression_params)
+        progression.update!(sets_completed: !progression.sets_completed)
         user = find_user
         render json: user.progressions.order(main_ex_id: :asc)
     end

@@ -7,6 +7,8 @@ function NextWeekBtn({ user, setUser }){
         fetch(`/users/${user.id}/next_week`)
             .then(r => r.json())
             .then(user => setUser(user))
+
+        console.log(user.progressions.first)
     }
 
     return (
