@@ -12,7 +12,7 @@ class UserSerializer < ActiveModel::Serializer
     #   week_num = 4
     # else
       week_num = self.object.current_week % 4 
-      week_num = week_num + 4 unless week_num > 0
+      week_num = 4 unless week_num > 0
 
     ExSet.where(week_id: week_num).order(num: :asc)
   end
