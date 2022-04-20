@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './pages/Home'
-import Login from './pages/Login'
+import Home from './pages/Home';
+import Login from './pages/Login';
+import NavBar from './components/NavBar';
 
 function App(){
 
@@ -20,11 +21,14 @@ function App(){
   if (!user) return <Login setUser={setUser} />
 
   return (
-    <Switch>
-      <Route exact path ='/'>
-        <Home user={user} setUser={setUser} />
-      </Route>
-    </Switch>    
+    <>
+      <NavBar user={user} setUser={setUser} />
+      <Switch>
+        <Route exact path ='/'>
+          <Home user={user} setUser={setUser} />
+        </Route>
+      </Switch>    
+    </>
   )
 }
 
