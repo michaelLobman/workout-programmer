@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 
-function NextWeekBtn({ user, setUser }){
+function AdvanceBtn({ user, setUser }){
     
     function handleClick(){
 
@@ -13,12 +13,13 @@ function NextWeekBtn({ user, setUser }){
 
     return (
         <Button 
+            id='advance-button'
             onClick={handleClick} 
-            variant="outline-primary"
+            variant="success"
         >
             Continue to Week {user.current_week + 1}
         </Button>
     )
 }
 
-export default NextWeekBtn;
+export default AdvanceBtn;

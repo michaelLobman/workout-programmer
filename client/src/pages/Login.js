@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import NavBar from '../components/NavBar';
 import LoginForm from '../components/LoginForm';
 import SignUpForm from '../components/SignUpForm';
 
@@ -14,7 +15,7 @@ function Login({ setUser }){
 
     return(
         <div>
-            <h1 id='login-h1'>Welcome to the Workout Programmer</h1>
+            <NavBar setUser={setUser} />
             { showLogin ? (
                 <>
                     <LoginForm onLogin={setUser} />

@@ -6,14 +6,35 @@ body {
     /* font-family: 'Montserrat', sans-serif; */
 }
 
+#progress-panel-div {
+    background-color: rgb(141, 63, 63);
+    color: rgb(197, 201, 206);
+    padding: 4% 10%;
+    border-radius: 30px;
+}
+
 #login-h1 {
-    color: rgb(169, 44, 44);
+    color: rgb(141, 63, 63);
     text-align: center;
     margin: 4%;
 }
 
+#workout-h2 {
+    color: rgb(141, 63, 63);
+    font-size: 3vw;
+    margin: 1% 0 0 0;
+}
+
 .form-container {
     width: 100%;
+}
+
+#advance-button {
+    margin: 4% 0 0 0;
+}
+
+#navbar-container {
+    padding: 1% 0;
 }
 
 .form-group {

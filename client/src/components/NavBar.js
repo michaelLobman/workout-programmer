@@ -2,11 +2,18 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from  'react-bootstrap/Navbar';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
 import { NavLink } from 'react-router-dom';
 
 
 function NavBar({ user, setUser }){
+
+
+    const renderText = user ?  <Navbar.Text>Welcome, {user.name}</Navbar.Text> : null
+    const renderButton = user ? <Button variant="outline-danger" onClick={handleClick}>Logout</Button> : null
+        
+
 
     function handleClick(){
         console.log('consider it handled');
@@ -21,9 +28,17 @@ function NavBar({ user, setUser }){
     }
     return (
         <Navbar bg='dark' variant='dark'  >
-            <Container>
+            <Container id='navbar-container'>
                 <Navbar.Brand as={NavLink} to="/">Workout Programmer</Navbar.Brand>
-                <Button variant="outline-danger" onClick={handleClick}>Logout</Button>
+                {renderText}
+                {/* <Navbar.Text>
+                    Week: {user.current_week} | Phase: {user.phase}
+                </Navbar.Text> */}
+                {/* <Container>
+                    <ProgressBar animated variant='success' label={`${now}%`} now={now} />
+                </Container> */}
+                {renderButton}
+                {/* <Button variant="outline-danger" onClick={handleClick}>Logout</Button> */}
             </Container>
         </Navbar>
     )
