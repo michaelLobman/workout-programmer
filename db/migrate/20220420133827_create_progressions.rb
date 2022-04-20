@@ -5,7 +5,7 @@ class CreateProgressions < ActiveRecord::Migration[7.0]
       t.integer :user_id
       t.integer :reps
       t.integer :weight
-      t.integer :sets_completed
+      t.boolean :sets_completed
 
       t.timestamps
     end
