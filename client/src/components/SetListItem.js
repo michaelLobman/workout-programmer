@@ -29,11 +29,12 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
             {reps} {amrap} reps @ {liftingWeight} pounds
             <Form.Check
                 type="switch"
-                label='Completed'
+                label="Completed"
                 checked={toggleChecked}
                 onChange={handleChange}
                 disabled={completed}
                 inline
+                className="list-form-check"
             />
         </ListGroup.Item>
 

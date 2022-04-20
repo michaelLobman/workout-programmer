@@ -17,6 +17,7 @@ function WorkoutAccordion({ user }){
     }, [user])
 
     
+    console.log(user)
 
     const items = progressions.map(progression => (
         <ExerciseItem 
