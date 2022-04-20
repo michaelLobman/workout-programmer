@@ -19,13 +19,10 @@ function Intro(){
                 combinations based on your one rep maximum for each of the four main lifts.
             </p>
             <p>
-                Enter your information below to get started!
+                Enter your information below to get started.
             </p>
         </Container>
     )
 }
-
-
-
 
 export default Intro;
