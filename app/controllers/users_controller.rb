@@ -3,6 +3,12 @@ class UsersController < ApplicationController
 
     def create
         user = User.create!(user_params)
+        params[:exercises].each do |exercise|
+            binding.break
+            ex_id = MainEx.find(exercise[:id]).id
+            max = max(exercise[:weight], exercise[:reps])
+            user.progressions.create!(main_ex_id: ex_id, baseline_max: max)
+        end
         session[:user_id] = user.id
         render json: user, status: :created
     end
@@ -36,6 +42,14 @@ class UsersController < ApplicationController
 
     def reset_progressions(user)
         user.progressions.each{ |progression| progression.update!(sets_completed: false) }
+    end
+
+    def max (weight, reps)
+        nearest_five(weight * reps * 0.0333 + weight)
+    end
+
+    def nearest_five (float)
+        (float/5.0).round * 5
     end
     
 

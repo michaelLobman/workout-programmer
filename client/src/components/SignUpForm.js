@@ -50,31 +50,28 @@ function SignUpForm({ onSignUp }){
     function handleSubmit(e) {
         e.preventDefault();
 
-        console.log(exerciseArray)
-
-
         const user = {
             full_name: fullName,
             username,
             password,
-            password_confirmation: passwordConf
-            
+            password_confirmation: passwordConf,
+            exercises: exerciseArray
         }
 
-        // fetch('/signup', {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify(user)
-        // })
-        //     .then(r => {
-        //         if (r.ok){
-        //             r.json().then(user => onSignUp(user));
-        //         } else {
-        //             r.json().then(error => setErrors(error.errors))
-        //         }
-        //     })
+        fetch('/signup', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(user)
+        })
+            .then(r => {
+                if (r.ok){
+                    r.json().then(user => onSignUp(user));
+                } else {
+                    r.json().then(error => setErrors(error.errors))
+                }
+            })
     }
 
     const renderErrors = errors.map(error => (

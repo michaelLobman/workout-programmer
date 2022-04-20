@@ -8,11 +8,10 @@ function ExerciseForm({ exercise, exArray }){
     const [weight, setWeight] = useState(100);
 
     let index = exArray.findIndex(item => item.id === exercise.id)
-    exArray[index].weight = weight
-    exArray[index].reps = reps
+    exArray[index].weight = parseInt(weight);
+    exArray[index].reps = parseInt(reps);
 
-
-    return(
+    return (
         <>
             <h3>{exercise.title}</h3>
             <Form.Group className='form-group'>
