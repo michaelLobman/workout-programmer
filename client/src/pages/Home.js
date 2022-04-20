@@ -10,11 +10,6 @@ function Home({ user, setUser }){
     const now = Math.round(user.current_week / 20 * 100);
     const phase = Math.ceil(user.current_week / 4) * 4 / 4
 
-    
-
-
-
-
     return (
         <Container id='home-container'>
             <h1 id='home-h1'>Welcome, {user.name}</h1>
