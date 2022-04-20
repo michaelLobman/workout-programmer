@@ -10,7 +10,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     const [ toggleChecked, setToggleChecked ] = useState(false)
     const liftingWeight = Math.round(wMax * percentage / 5) * 5
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
-    const toggleClass = completed ? 'green-background' : null
+    const toggleClass = completed ? 'completed-class' : null
 
     function handleChange(){
         setToggleChecked(!toggleChecked)

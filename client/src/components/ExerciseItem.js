@@ -24,8 +24,7 @@ function ExerciseItem({ progressionObj, sets, setProgressions, userId }){
             userId={userId}
         />
     ))
-    console.log(`${exercise}: ${id}`)
-
+    
     return (
         <Accordion.Item eventKey={id}>
             <Form>
