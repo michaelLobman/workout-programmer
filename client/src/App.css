@@ -7,20 +7,16 @@ body {
 }
 
 #progress-panel-div {
-    background-color: rgb(141, 63, 63);
-    color: rgb(197, 201, 206);
+    /* background-color: rgb(141, 63, 63); */
+    background-color: #bf3d4a;
+    color: rgb(255, 255, 255);
     padding: 4% 10%;
     border-radius: 30px;
 }
 
-#login-h1 {
-    color: rgb(141, 63, 63);
-    text-align: center;
-    margin: 4%;
-}
-
 #workout-h2 {
-    color: rgb(141, 63, 63);
+    /* color: rgb(141, 63, 63); */
+    color: #bf3d4a;
     font-size: 3vw;
     margin: 1% 0 0 0;
 }
@@ -64,10 +60,6 @@ body {
     text-decoration: line-through;
 }
 
-.dark-theme {
-    background-color: black;
-    color: blue;
-}
 
 .green-background {
     background-color: rgba(6, 127, 6, 0.748);
