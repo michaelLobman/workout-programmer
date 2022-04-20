@@ -7,24 +7,34 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { NavLink } from 'react-router-dom';
 
 
-function NavBar({ user, setUser }){
+function NavBar({ user, setUser, showLogin, setShowLogin }){
+
+    let buttonText;
+
+    buttonText = showLogin ? 'Sign Up' : 'Login';
+    if (user) buttonText = 'Logout';
+
+    // const buttonText = 'login'
+
 
 
     const renderText = user ?  <Navbar.Text>Welcome, {user.name}</Navbar.Text> : null
-    const renderButton = user ? <Button variant="outline-danger" onClick={handleClick}>Logout</Button> : null
         
 
 
     function handleClick(){
-        console.log('consider it handled');
-        fetch('/logout', {
-            method: "DELETE"
-        })
-            .then(r => {
-                if (r.ok){
-                    setUser(null)
-                }
-            });
+        if (user) {
+            fetch('/logout', {
+                method: "DELETE"
+            })
+                .then(r => {
+                    if (r.ok){
+                        setUser(null)
+                    }
+                });
+        } else {
+            setShowLogin(!showLogin)
+        }
     }
     return (
         <Navbar bg='dark' variant='dark'  >
@@ -37,7 +47,7 @@ function NavBar({ user, setUser }){
                 {/* <Container>
                     <ProgressBar animated variant='success' label={`${now}%`} now={now} />
                 </Container> */}
-                {renderButton}
+                <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button> 
                 {/* <Button variant="outline-danger" onClick={handleClick}>Logout</Button> */}
             </Container>
         </Navbar>

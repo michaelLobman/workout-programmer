@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import SignUp from './pages/SignUp';
 import NavBar from './components/NavBar';
 
 function App(){

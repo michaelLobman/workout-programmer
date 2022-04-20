@@ -58,7 +58,7 @@ function LoginForm({ onLogin }){
                     />
                 </Form.Group>
                 <Form.Group className='form-group'>
-                    <Button type='submit' variant='primary'>Submit</Button>
+                    <Button type='submit' variant='danger'>Submit</Button>
                 </Form.Group>
                 <Form.Group className='form-group'>
                     {renderErrors}

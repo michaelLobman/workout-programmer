@@ -15,34 +15,8 @@ function Login({ setUser }){
 
     return(
         <div>
-            <NavBar setUser={setUser} />
-            { showLogin ? (
-                <>
-                    <LoginForm onLogin={setUser} />
-                    <Container className='show-container'>
-                        <Button 
-                            type='button' 
-                            variant='info' 
-                            onClick={(() => setShowLogin(!showLogin))}
-                        >
-                            Sign Up 
-                        </Button>
-                    </Container>
-                </>
-            ): (
-                <>
-                    <SignUpForm onSignUp={setUser} />
-                    <Container className='show-container'>
-                        <Button 
-                            type='button'
-                            variant='info'
-                            onClick={(() => setShowLogin(!showLogin))}
-                        >
-                            Login
-                        </Button>
-                    </Container>
-                </>
-            )}
+            <NavBar setUser={setUser} setShowLogin={setShowLogin} showLogin={showLogin} />
+            { showLogin ? <LoginForm onLogin={setUser} /> : <SignUpForm onSignUp={setUser} /> }
         </div>
     )
 }
