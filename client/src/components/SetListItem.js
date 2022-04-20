@@ -13,15 +13,13 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     const toggleClass = completed ? 'green-background' : null
 
     function handleChange(){
+        setToggleChecked(!toggleChecked)
+
         if (num === 3) {
-            setToggleChecked(!toggleChecked)
             console.log('this is the end')
             fetch(`/progressions/user/${userId}/${id}`)
                 .then(r => r.json())
                 .then(data => setProgressions(data))
-        } else {
-            setToggleChecked(!toggleChecked)
-
         }
     }
 
@@ -34,7 +32,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
                 label='Completed'
                 checked={toggleChecked}
                 onChange={handleChange}
-                disabled={!!completed}
+                disabled={completed}
                 inline
             />
         </ListGroup.Item>

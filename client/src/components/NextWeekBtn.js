@@ -8,7 +8,7 @@ function NextWeekBtn({ user, setUser }){
             .then(r => r.json())
             .then(user => setUser(user))
 
-        console.log(user.progressions.first)
+        console.log(user.progressions)
     }
 
     return (

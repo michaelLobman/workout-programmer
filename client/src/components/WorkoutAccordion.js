@@ -14,7 +14,7 @@ function WorkoutAccordion({ user }){
         fetch(`/progressions/user/${user.id}`)
             .then(r => r.json())
             .then(data => setProgressions(data))
-    }, [])
+    }, [user])
 
     
 
