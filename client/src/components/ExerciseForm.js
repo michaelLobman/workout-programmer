@@ -18,6 +18,8 @@ function ExerciseForm({ exercise, exArray }){
                 <Form.Label>Weight</Form.Label>
                 <Form.Control
                     type="number"
+                    pattern="[0-9]*"
+                    inputMode="numeric"
                     value={weight}
                     onChange={(e => setWeight(e.target.value))}
                 />
@@ -26,6 +28,8 @@ function ExerciseForm({ exercise, exArray }){
                 <Form.Label>Reps</Form.Label>
                 <Form.Control
                 type="number"
+                pattern="[0-9]*"
+                inputMode="numeric"
                 value={reps}
                 onChange={(e => setReps(e.target.value))}
                 />
