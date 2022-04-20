@@ -41,9 +41,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_20_133827) do
   create_table "progressions", force: :cascade do |t|
     t.integer "main_ex_id"
     t.integer "user_id"
-    t.integer "reps"
-    t.integer "weight"
-    t.integer "sets_completed"
+    t.integer "baseline_max"
+    t.integer "current_max"
+    t.boolean "sets_completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

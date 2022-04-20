@@ -1,5 +1,5 @@
 class ProgressionSerializer < ActiveModel::Serializer
-  attributes :id, :reps, :weight, :exercise, :max, :w_max, :sets_completed, :main_ex_id
+  attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id
 
   def exercise
     MainEx.find(self.object.main_ex_id).title

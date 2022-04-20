@@ -24,7 +24,7 @@ class ProgressionsController < ApplicationController
     private
 
     def progression_params
-        params.permit(:sets_completed, :main_ex_id, :user_id, :reps, :weight)
+        params.permit(:sets_completed, :main_ex_id, :user_id, :current_max, :baseline_max)
     end
 
     def find_user

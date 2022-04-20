@@ -9,7 +9,7 @@ import SetListItem from './SetListItem';
 
 function ExerciseItem({ progressionObj, sets, setProgressions, userId }){
 
-    const {exercise, max, w_max: wMax, id, sets_completed } = progressionObj
+    const {exercise, baseline_max, w_max: wMax, id, sets_completed } = progressionObj
     let headerClass = sets_completed ? 'strikethrough' : null
     const numText = sets[2].reps === 1 ? "5 – 3 – 1" : `3 x ${sets[0].reps}`
     const renderSets = sets.map(set => (
