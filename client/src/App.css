@@ -8,10 +8,27 @@ body {
 
 #progress-panel-div {
     /* background-color: rgb(141, 63, 63); */
-    background-color: #bf3d4a;
+    background-color: #dc3545;
     color: rgb(255, 255, 255);
     padding: 4% 10%;
     border-radius: 30px;
+}
+
+input[type=text], input[type=password]{
+    border: none;
+    border-bottom: 2px solid #dc3545;
+    background-color: rgb(197, 201, 206);
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+label {
+    color: #dc3545;
+
 }
 
 #workout-h2 {
