@@ -26,7 +26,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     
     return (
         <ListGroup.Item className={toggleClass}>
-            {reps} {amrap} reps @ {liftingWeight} pounds
+            <h2 className="set-text">{reps} {amrap} reps @ {liftingWeight} pounds</h2>
             <Form.Check
                 type="switch"
                 label="Completed"

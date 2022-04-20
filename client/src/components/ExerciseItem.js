@@ -24,12 +24,12 @@ function ExerciseItem({ progressionObj, sets, setProgressions, userId }){
             userId={userId}
         />
     ))
-    
+
     return (
         <Accordion.Item eventKey={id}>
             <Form>
                 <Accordion.Header className={headerClass}>
-                    {exercise} {numText}
+                    <h2>{exercise} {numText}</h2>
                 </Accordion.Header>
                 <Accordion.Body>
                     <ListGroup>

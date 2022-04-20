@@ -3,6 +3,7 @@ body {
     background-color: rgb(197, 201, 206);
     font-family: 'M PLUS 1', sans-serif;
     font-weight: 500;
+    font-size: 1.5vw;
     /* font-family: 'Montserrat', sans-serif; */
 }
 
@@ -107,7 +108,9 @@ label, .label {
 }
 
 .list-form-check {
-    margin: 0 5%;
+    margin: 2%;
+    font-size: 2vw;
+
 
 }
 
@@ -115,4 +118,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.ex-text {
+    font-size: 3vw;
+    padding: 10px;
+}
+.set-text {
+    font-size: 2.3vw;
+    display: inline-flex;
+
 }
