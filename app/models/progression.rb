@@ -1,7 +1,7 @@
 class Progression < ApplicationRecord
+    attribute :sets_completed, :boolean, default: false
     belongs_to :user
     belongs_to :main_ex
-    validates :sets_completed, numericality: { less_than_or_equal_to: 3 }
 
     def max 
         nearest_five(self.weight * self.reps * 0.0333 + self.weight)

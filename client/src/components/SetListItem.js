@@ -10,9 +10,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
     const [ toggleChecked, setToggleChecked ] = useState(false)
     const liftingWeight = Math.round(wMax * percentage / 5) * 5
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
-    const variant = completed >= num ? 'success' : 'outline-success'
-    const disable = completed >= num ? true : false;
-
     const toggleClass = toggleChecked ? 'green-background' : null
 
     // function handleClick(e){
@@ -54,14 +51,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId }){
                 onChange={handleChange}
                 inline
             />
-            {/* <Button 
-                className='set-button'
-                disabled={disable}
-                variant={variant} 
-                onClick={handleClick}
-            >
-                Complete
-            </Button> */}
         </ListGroup.Item>
 
     )

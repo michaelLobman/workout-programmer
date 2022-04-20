@@ -80,27 +80,23 @@ Progression.create!([
         user_id: 1,
         reps: 6,
         weight: 185,
-        sets_completed: 0
     },
     {
         main_ex_id: 2,
         user_id: 1,
         reps: 4,
         weight: 275,
-        sets_completed: 0
     },
     {
         main_ex_id: 3,
         user_id: 1,
         reps: 4,
         weight: 275,
-        sets_completed: 0
     },
     {
         main_ex_id: 4,
         user_id: 1,
         reps: 4,
         weight: 115,
-        sets_completed: 0
     }
 ])
