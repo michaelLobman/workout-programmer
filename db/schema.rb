@@ -44,8 +44,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_20_133827) do
     t.integer "baseline_max"
     t.integer "current_max"
     t.boolean "sets_completed"
-    t.integer "most_reps"
-    t.integer "highest_weight"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
