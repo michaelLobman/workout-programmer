@@ -48,9 +48,9 @@ class UsersController < ApplicationController
     #     nearest_five(weight * reps * 0.0333 + weight)
     # end
 
-    def nearest_five (float)
-        (float/5.0).round * 5
-    end
+    # def nearest_five (float)
+    #     (float/5.0).round * 5
+    # end
     
 
 end

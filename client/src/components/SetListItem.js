@@ -4,14 +4,12 @@ import Button from 'react-bootstrap/Button';
 import { First } from 'react-bootstrap/esm/PageItem';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
-import MaxEffortForm from './MaxEffortForm';
 
-function SetListItem({ set, wMax, completed, setProgressions, id, userId, exId, currentMax }){
+function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
 
     const [completedReps, setCompletedReps] = useState(1);
 
     const { num, reps, percentage, week_id: week } = set
-    const [ toggleChecked, setToggleChecked ] = useState(false)
     const weight = Math.round(wMax * percentage / 5) * 5
     const toggleClass = completed ? 'completed-class' : null
 
@@ -40,13 +38,14 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, exId, 
     }
 
     return (
-        <ListGroup.Item className={toggleClass}>
-            <h2 className="set-text">{reps} {amrap} reps @ {weight} pounds</h2>
+        <ListGroup.Item>
+            <h2 className={toggleClass} id="set-text">{reps} {amrap} reps @ {weight} pounds</h2>
             { num === 3 ? (
-            <Form onSubmit={handleSubmit}>
+            <Form id="set-form" onSubmit={handleSubmit}>
                 <Form.Group className="form-group">
                     <Form.Label>Reps Performed:</Form.Label>
                     <Form.Control
+                        id="set-input"
                         type="number"
                         pattern="[0-9]*"
                         inputMode="numeric"
@@ -55,7 +54,14 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, exId, 
                     />
                 </Form.Group>
                 <Form.Group className="form-group">
-                    <Button type="submit" variant="outline-danger">Complete</Button>
+                    <Button 
+                        id="set-submit" 
+                        type="submit" 
+                        variant="outline-danger"
+                        disabled={completed ? true : false}
+                    >
+                        Complete
+                    </Button>
                 </Form.Group>
             </Form>
             ) : null }

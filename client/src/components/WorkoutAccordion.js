@@ -7,9 +7,6 @@ function WorkoutAccordion({ user }){
 
     const [progressions, setProgressions] = useState([]);
 
-
-    // trying to fetch progressions independent of user, that would need to be a function then.
-
     useEffect(() => {
         fetch(`/progressions/user/${user.id}`)
             .then(r => r.json())
@@ -26,6 +23,7 @@ function WorkoutAccordion({ user }){
             sets={user.week_sets}
             setProgressions={setProgressions}
             userId={user.id}
+            
         />
     ))
 
