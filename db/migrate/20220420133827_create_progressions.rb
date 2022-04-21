@@ -6,6 +6,8 @@ class CreateProgressions < ActiveRecord::Migration[7.0]
       t.integer :baseline_max
       t.integer :current_max
       t.boolean :sets_completed
+      t.integer :most_reps
+      t.integer :highest_weight
 
       t.timestamps
     end

@@ -9,8 +9,11 @@ class ProgressionsController < ApplicationController
 
     def update_user_progressions
         progression = find_progression
-        progression.update!(sets_completed: !progression.sets_completed)
         user = find_user
+        progression.update!(sets_completed: true)
+        new_max = max(params[:weight], params[:reps])
+        greater = new_max > progression.current_max ? new_max : current_max
+        progression.update!(current_max: greater)
         render json: user.progressions.order(main_ex_id: :asc)
     end
 
@@ -34,4 +37,5 @@ class ProgressionsController < ApplicationController
     def find_progression
         Progression.find(params[:id])
     end
+
 end

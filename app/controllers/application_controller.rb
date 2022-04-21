@@ -15,4 +15,12 @@ def render_unprocessable_entity_response(exception)
     render json: { errors: exception.record.errors.full_messages }, status: :unprocessable_entity
 end
 
+def max (weight, reps)
+    nearest_five(weight * reps * 0.0333 + weight)
+end
+
+def nearest_five (float)
+    (float/5.0).round * 5
+end
+
 end

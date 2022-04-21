@@ -56,8 +56,8 @@ label, .label {
 
 #workout-h2 {
     /* color: rgb(141, 63, 63); */
-    color: #bf3d4a;
-    font-size: 3vw;
+    color: #dc3545;
+    font-size: 3.5vw;
     margin: 1% 0 0 0;
 }
 
@@ -120,8 +120,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 .ex-text {
-    font-size: 3vw;
-    padding: 10px;
+    font-size: 2.5vw;
 }
 .set-text {
     font-size: 2.3vw;

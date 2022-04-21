@@ -1,5 +1,7 @@
 class Progression < ApplicationRecord
     attribute :sets_completed, :boolean, default: false
+    attribute :current_max, :integer, default: 0
+
     belongs_to :user
     belongs_to :main_ex
 
