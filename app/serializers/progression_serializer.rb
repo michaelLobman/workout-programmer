@@ -9,7 +9,7 @@ class ProgressionSerializer < ActiveModel::Serializer
 
 
   def weights_plates
-    base = self.object.baseline_max 
+    base = self.object.w_max
     arr = []
     self.object.user.ex_sets.each do |set|
       # arr << nearest_five(set.percentage * base)

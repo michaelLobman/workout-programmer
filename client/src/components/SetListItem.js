@@ -1,17 +1,28 @@
 import { useState } from 'react';
 
+import PlateWindow from './PlateWindow'
+
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
+function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
 
     const [completedReps, setCompletedReps] = useState(1);
 
-    const platesArr = [45, 35, 25, 10, 5, 2.5]
+    const {weight, plates } = wP
+
+    const renderPlates = Object.entries(plates).map(entry => (
+        <li key={entry[0]}>{`${entry[0]}: ${entry[1]}`}</li>
+
+    ))
+    
+
+
+    console.log(wP)
 
     const { num, reps, percentage, week_id: week } = set
-    const weight = Math.round(wMax * percentage / 5) * 5
+    // const weight = Math.round(wMax * percentage / 5) * 5
     const toggleClass = completed ? 'completed-class' : null
 
     const amrap = num === 3 && week % 4 !== 0 ? '+' : null
@@ -41,8 +52,12 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
     return (
         <ListGroup.Item>
             <h2 className={toggleClass} id="set-text">
-                {reps} {amrap} reps @ {weight} pounds
+                {reps} {amrap} reps @ {weight} pounds 
+                <ul>
+                    {renderPlates}
+                </ul>
             </h2>
+            <PlateWindow plates={plates} />
             { num === 3 ? (
             <Form id="set-form" onSubmit={handleSubmit}>
                 <Form.Group className="form-group">

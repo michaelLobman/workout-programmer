@@ -13,7 +13,7 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
 
     // const [reps, setReps] = useState()
 
-    const {exercise, main_ex_id: exId, current_max: currentMax, w_max: wMax, id, sets_completed } = progression
+    const {exercise, main_ex_id: exId, current_max: currentMax, w_max: wMax, id, sets_completed, weights_plates: wP } = progression
     let headerClass = sets_completed ? 'completed-class' : null
     const numText = sets[2].reps === 1 ? "5 – 3 – 1" : `3 x ${sets[0].reps}`
     const renderSets = sets.map(set => (
@@ -28,6 +28,7 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
             userId={userId}
             exId={exId}
             currentMax={currentMax}
+            wP={wP[set.num - 1]}
         />
     ))
 
