@@ -53,9 +53,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
         <ListGroup.Item>
             <h2 className={toggleClass} id="set-text">
                 {reps} {amrap} reps @ {weight} pounds 
-                <ul>
-                    {renderPlates}
-                </ul>
             </h2>
             <PlateWindow plates={plates} />
             { num === 3 ? (

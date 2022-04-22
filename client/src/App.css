@@ -147,3 +147,15 @@ input::-webkit-inner-spin-button {
     text-decoration: none;
 
 }
+
+#plate-h3 {
+    color:#dc3545;
+    text-align:center;
+}
+
+#plate-ul {
+    list-style: none;
+    color:#dc3545;
+    text-align:center;
+    /* font-size: medium; */
+}
