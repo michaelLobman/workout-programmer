@@ -25,5 +25,7 @@ class UserSerializer < ActiveModel::Serializer
     self.object.progressions.order(main_ex_id: :asc)
   end
 
+  
+
 
 end

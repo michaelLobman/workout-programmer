@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
 import Button from 'react-bootstrap/Button';
-import { First } from 'react-bootstrap/esm/PageItem';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
 
     const [completedReps, setCompletedReps] = useState(1);
+
+    const platesArr = [45, 35, 25, 10, 5, 2.5]
 
     const { num, reps, percentage, week_id: week } = set
     const weight = Math.round(wMax * percentage / 5) * 5
@@ -39,7 +40,9 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
 
     return (
         <ListGroup.Item>
-            <h2 className={toggleClass} id="set-text">{reps} {amrap} reps @ {weight} pounds</h2>
+            <h2 className={toggleClass} id="set-text">
+                {reps} {amrap} reps @ {weight} pounds
+            </h2>
             { num === 3 ? (
             <Form id="set-form" onSubmit={handleSubmit}>
                 <Form.Group className="form-group">
@@ -71,65 +74,3 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId,  }){
 
 export default SetListItem;
 
-
-
-
-
-
-
-
-            // {num === 3 ? (
-            //     <MaxEffortForm 
-            //         setProgressions={setProgressions} 
-            //         progressionId={id} 
-            //         exId={exId} 
-            //         userId={userId} 
-            //         currentMax={currentMax} 
-            //         weight={liftingWeight}
-            //     />   
-                
-                
-        // <ListGroup.Item className={toggleClass}>
-        //     <h2 className="set-text">{reps} {amrap} reps @ {liftingWeight} pounds</h2>
-
-        //     {num === 3 ? (
-        //         <MaxEffortForm 
-        //             setProgressions={setProgressions} 
-        //             progressionId={id} 
-        //             exId={exId} 
-        //             userId={userId} 
-        //             currentMax={currentMax} 
-        //             weight={liftingWeight}
-        //         />
-        //     ) : (
-        //         null
-            // <Form.Check
-            //     type="switch"
-            //     label="Completed"
-            //     checked={toggleChecked}
-            //     onChange={(() => setToggleChecked(!toggleChecked))}
-            //     disabled={completed}
-            //     inline
-            //     className="list-form-check"
-            // />
-//             )}
-//         </ListGroup.Item>
-//     )
-// }
-
-
-
-
-// return (
-//     <ListGroup.Item className={toggleClass}>
-//         <h2 className="set-text">{reps} {amrap} reps @ {liftingWeight} pounds</h2>
-//         <Form.Check
-//             type="switch"
-//             label="Completed"
-//             checked={toggleChecked}
-//             onChange={handleChange}
-//             disabled={completed}
-//             inline
-//             className="list-form-check"
-//         />
-//     </ListGroup.Item>
