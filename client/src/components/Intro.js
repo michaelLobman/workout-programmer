@@ -5,7 +5,7 @@ function Intro(){
         <Container id='intro-container'>
             <h3>Welcome to the Workout Programmer.</h3>
             <p>
-                Based on the concepts developed in Jim Wendler's 5-3-1 philosophy,
+                Based on the concepts developed in Jim Wendler's 5-3-1 program,
                 the workout plan centers around four main compound movements:
             </p>
                 <ul>

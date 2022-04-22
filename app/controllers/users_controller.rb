@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     def next_week
         user = find_user
         reset_progressions(user)
-        user.update!(current_week: user.current_week + 1)
+        user.update!(week_id: user.week_id + 1)
         render json: user
     end
 
@@ -30,10 +30,10 @@ class UsersController < ApplicationController
 
     private
 
-    # do i need current week here? Or can that be supplied by the backend?
+    # do i need week_id here? I don't think so...
 
     def user_params
-        params.permit(:username, :password, :full_name, :current_week)
+        params.permit(:username, :password, :full_name)
     end
 
     def find_user

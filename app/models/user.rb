@@ -3,7 +3,10 @@ class User < ApplicationRecord
     has_many :progressions
     has_many :main_exes, through: :progressions
 
-    attribute :current_week, :integer, default: 1
+    belongs_to :week
+    has_many :ex_sets, through: :week
+
+    attribute :week_id, :integer, default: 1
 
 
 

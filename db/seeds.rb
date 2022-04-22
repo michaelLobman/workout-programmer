@@ -1,10 +1,4 @@
 # create test user, first week of program
-user = User.create!(
-    full_name: 'Mike Lobman', 
-    username: 'mlobman',
-    password: 'admin',
-    current_week: 1)
-
 num = 1
 phase = 1 
 20.times do
@@ -14,6 +8,16 @@ phase = 1
         phase = phase + 1
     end
 end
+
+
+
+user = User.create!(
+    full_name: 'Mike Lobman', 
+    username: 'mlobman',
+    password: 'admin'
+)
+
+
 
 ExSet.create!([
     {

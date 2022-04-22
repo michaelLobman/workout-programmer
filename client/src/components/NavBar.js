@@ -14,10 +14,6 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
     buttonText = showLogin ? 'Sign Up' : 'Login';
     if (user) buttonText = 'Logout';
 
-    // const buttonText = 'login'
-
-
-
     const renderText = user ?  <Navbar.Text>Welcome, {user.name}</Navbar.Text> : null
         
 

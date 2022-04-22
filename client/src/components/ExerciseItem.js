@@ -7,13 +7,13 @@ import ListGroup from 'react-bootstrap/ListGroup'
 
 import SetListItem from './SetListItem';
 
-function ExerciseItem({ progressionObj, sets, setProgressions, userId }){
+function ExerciseItem({ progression, sets, setProgressions, userId }){
 
-    console.log(progressionObj)
+    console.log(progression)
 
     // const [reps, setReps] = useState()
 
-    const {exercise, main_ex_id: exId, current_max: currentMax, w_max: wMax, id, sets_completed } = progressionObj
+    const {exercise, main_ex_id: exId, current_max: currentMax, w_max: wMax, id, sets_completed } = progression
     let headerClass = sets_completed ? 'completed-class' : null
     const numText = sets[2].reps === 1 ? "5 – 3 – 1" : `3 x ${sets[0].reps}`
     const renderSets = sets.map(set => (

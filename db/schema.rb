@@ -50,7 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_20_133827) do
 
   create_table "users", force: :cascade do |t|
     t.string "full_name"
-    t.integer "current_week"
+    t.integer "week_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
