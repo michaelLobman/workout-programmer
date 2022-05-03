@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         new_week = user.week_id == 4 ? 1 : user.week_id + 1
         user.update!(week_id: new_week)
         user.update!(current_week: user.current_week + 1)
-        user.update!(phase: user.phase + 1) unless user.phase % 4 != 1
+        user.update!(phase: user.phase + 1) unless user.current_week % 4 != 1
 
         render json: user
     end
