@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     def create
         user = User.create!(user_params)
         params[:exercises].each do |exercise|
-            binding.break
+            # binding.break
             ex_id = MainEx.find(exercise[:id]).id
             max = max(exercise[:weight], exercise[:reps])
             user.progressions.create!(main_ex_id: ex_id, baseline_max: max)
