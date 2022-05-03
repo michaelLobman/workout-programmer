@@ -17,7 +17,7 @@ function AdvanceBtn({ user, setUser }){
             onClick={handleClick} 
             variant="success"
         >
-            Continue to Week {user.week.num + 1}
+            Continue to Week {user.current_week + 1}
         </Button>
     )
 }

@@ -14,7 +14,13 @@ class Progression < ApplicationRecord
     
     def w_max
         increment = self.main_ex.upper_lower == 'upper' ? 5 : 10
-        multiplier = self.user.week.phase - 1
+
+
+
+        phase = self.user.current_week 
+
+
+        multiplier = self.user.phase - 1
         increase = increment * multiplier
         
         nearest_five((self.baseline_max * 0.9) + increase)

@@ -9,7 +9,6 @@ import SetListItem from './SetListItem';
 
 function ExerciseItem({ progression, sets, setProgressions, userId }){
 
-    console.log(progression)
 
     // const [reps, setReps] = useState()
 
