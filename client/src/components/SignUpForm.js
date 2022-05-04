@@ -13,14 +13,6 @@ function SignUpForm({ onSignUp }){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConf, setPasswordConf] = useState("");
-    // const [sReps, setSReps] = useState(0);
-    // const [sWeight, setSWeight] = useState(0);
-    // const [bReps, setBReps] = useState(0);
-    // const [bWeight, setBWeight] = useState(0);
-    // const [dReps, setDReps] = useState(0);
-    // const [dWeight, setDWeight] = useState(0);
-    // const [mReps, setMReps] = useState(0);
-    // const [mWeight, setMWeight] = useState(0);
 
     const [errors, setErrors] = useState([]);
 

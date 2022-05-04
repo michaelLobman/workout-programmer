@@ -8,13 +8,15 @@ import NavBar from './components/NavBar';
 function App(){
 
   const [user, setUser] = useState(null)
-
-  console.log(user)
+  const [appProgressions, setAppProgressions] = useState([]);
 
   useEffect(() => {
     fetch("/me").then(r => {
       if (r.ok){
-        r.json().then(user => setUser(user))
+        r.json().then(user => {
+          setUser(user)
+          setAppProgressions(user.progressions)
+        })
       }
     });
   }, [])
@@ -28,7 +30,7 @@ function App(){
       <NavBar user={user} setUser={setUser} />
       <Switch>
         <Route exact path='/profile'>
-          <Profile user={user} />
+          <Profile progressions={appProgressions} />
         </Route>
         <Route exact path ='/'>
           <Home user={user} setUser={setUser} />

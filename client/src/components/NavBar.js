@@ -36,15 +36,10 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
         <Navbar bg='dark' variant='dark'  >
             <Container id='navbar-container'>
                 <Navbar.Brand as={NavLink} to="/">Workout Programmer</Navbar.Brand>
-                {renderText}
-                {/* <Navbar.Text>
-                    Week: {user.current_week} | Phase: {user.phase}
-                </Navbar.Text> */}
-                {/* <Container>
-                    <ProgressBar animated variant='success' label={`${now}%`} now={now} />
-                </Container> */}
-                <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button> 
-                {/* <Button variant="outline-danger" onClick={handleClick}>Logout</Button> */}
+                <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                <Nav.Link as={NavLink} to="/profile">{/*{user.user.name}'s */}Profile</Nav.Link>
+{/*                {renderText}
+*/}                <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button> 
             </Container>
         </Navbar>
     )

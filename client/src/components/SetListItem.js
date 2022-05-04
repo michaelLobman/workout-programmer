@@ -17,10 +17,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
 
     ))
     
-
-
-    console.log(wP)
-
     const { num, reps, percentage, week_id: week } = set
     // const weight = Math.round(wMax * percentage / 5) * 5
     const toggleClass = completed ? 'completed-class' : null
