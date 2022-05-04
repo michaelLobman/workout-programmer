@@ -125,9 +125,9 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-.ex-text {
-/*    font-size: 2.5vw;
-*/}
+/* .ex-text {
+   font-size: 2.5vw;
+} */
 #set-text {
 /*    font-size: 2.3vw;
 */    display: inline-flex;
@@ -187,10 +187,20 @@ input::-webkit-inner-spin-button {
 
 #profile-h2 {
     color: white;
-    font-size:  30px;
+    font-size: xx-large;
     text-align: center;
     padding: 3%;
     background-color: #dc3545;
+    width: 100%;
+    margin: 0;
+}
+
+#profile-h3 {
+    color:#dc3545;
+    font-size: large;
+    text-align: center;
+    padding: 3%;
+    background-color: white;
     width: 100%;
 }
 
@@ -203,14 +213,14 @@ input::-webkit-inner-spin-button {
     list-style: none;
 }
 
+.progression-card {
+    margin: 2%;
+}
+
 
 .plates-li {
     font-size: large;
 }
-
-/* .plates-ul {
-    font-size: large;
-} */
 
 .plates-btn {
     margin: 1% auto;

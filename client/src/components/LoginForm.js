@@ -27,7 +27,7 @@ function LoginForm({ onLogin }){
         })
             .then(r => {
                 if (r.ok){
-                    r.json().then(user => onLogin(user));
+                    r.json().then(user => onLogin(user, user.progressions));
                 } else {
                     r.json().then(error => setErrors(error.errors))
                 }

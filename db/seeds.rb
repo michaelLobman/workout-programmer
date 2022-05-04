@@ -1,12 +1,6 @@
 # create test user, first week of program
-num = 1
-phase = 1 
-20.times do
-    Week.create!(num: num, phase: phase)
-    num = num + 1
-    if num%4 == 1
-        phase = phase + 1
-    end
+4.times do
+    Week.create!()
 end
 
 

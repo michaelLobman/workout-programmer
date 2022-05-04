@@ -21,9 +21,14 @@ function App(){
     });
   }, [])
 
+  function onLogin(user, progressions){
+    setUser(user);
+    setProgressions(progressions);
+  }
+
   // if (!user) return <Login setUser={setUser} />
 
-  if (!user) return <Login setUser={setUser} />
+  if (!user) return <Login onLogin={onLogin} setUser={setUser} />
 
   return (
     <>

@@ -6,19 +6,18 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 function Profile({ progressions, user }) {
 
-	const renderedListItems = progressions.map(progression => (
+	const renderedProgressions = progressions.map(progression => (
 		<ProfileProgression key={progression.id} progression={progression} />
 		))
 	return (
 		<>
 			<h2 id="profile-h2">{user.name}'s Profile</h2>
+			<h3 id="profile-h3">Progressions</h3>
 
 			<Container id='profile-container'>
 
-				<ListGroup id="profile-listgroup">
-					{renderedListItems}
-				</ListGroup>
-				<ProgressPanel user={user} />
+			{renderedProgressions}
+			<ProgressPanel user={user} />
 
 			</Container>
 		</>

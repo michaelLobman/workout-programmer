@@ -9,14 +9,14 @@ import Container from 'react-bootstrap/Container';
 
 
 
-function Login({ setUser }){
+function Login({ onLogin, setUser }){
 
     const [showLogin, setShowLogin] = useState(true)
 
     return(
         <div>
             <NavBar setUser={setUser} setShowLogin={setShowLogin} showLogin={showLogin} />
-            { showLogin ? <LoginForm onLogin={setUser} /> : <SignUpForm onSignUp={setUser} /> }
+            { showLogin ? <LoginForm onLogin={onLogin} /> : <SignUpForm onSignUp={setUser} /> }
         </div>
     )
 }
