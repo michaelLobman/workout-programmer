@@ -205,6 +205,21 @@ input::-webkit-inner-spin-button {
 
 .plates-dropdown {
     margin: 3%;
-    display: inline-flex;
-    font-size: 10px
+    font-size: 10px;
+}
+
+.plates-li {
+    font-size: large;
+}
+
+.plates-ul {
+    font-size: large;
+}
+
+.plates-btn {
+    margin: 1% auto;
+    font-size: x-large;
+    display: block;
+    width: 40%;
+    padding: 1%;
 }
