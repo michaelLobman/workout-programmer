@@ -202,3 +202,9 @@ input::-webkit-inner-spin-button {
 .profile-list-item {
     list-style: none;
 }
+
+.plates-dropdown {
+    margin: 3%;
+    display: inline-flex;
+    font-size: 10px
+}
