@@ -7,6 +7,7 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import { FloatingLabel } from 'react-bootstrap';
 
 function SignUpForm({ onSignUp }){
     const [fullName, setFullName] = useState("");
@@ -71,8 +72,72 @@ function SignUpForm({ onSignUp }){
     ))
 
     return(
+
+        // removing form groups above exercises, trying to go them over
         <>
             <Intro />
+            <Container>
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Full Name"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className="form-input"
+                            type="text" 
+                            placeholder="Full Name"
+                            value={fullName}
+                            onChange={(e => setFullName(e.target.value))}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Username"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className="form-input"
+                            type="text" 
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e => setUsername(e.target.value))}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Password"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className="form-input"
+                            type="password" 
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e => setPassword(e.target.value))}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Confirm Password"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className="form-input"
+                            type="password" 
+                            placeholder="Confirm Password"
+                            value={passwordConf}
+                            onChange={(e => setPasswordConf(e.target.value))}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
+            </Container>
             <Container className='form-container'>
                 <Form id='signup-form' onSubmit={handleSubmit}>
                     <Form.Group className='form-group'>

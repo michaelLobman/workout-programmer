@@ -10,9 +10,9 @@ body {
 #intro-container {
     padding: 5% 0 ;
 }
-form {
+/* form {
     text-align: center;
-}
+} */
 
 #progress-panel-div {
     background-color: #dc3545;
@@ -31,22 +31,30 @@ form {
     margin: 5% auto;
 } */
 
-input[type=text], input[type=number], input[type=password]{
+
+.form-group {
+    text-align: center;
+}
+
+.form-input {
+    width: 70%;
+}
+
+input:focus {
+    background-color: #dc3545;
+}
+/* input[type=text], input[type=number], input[type=password]{
     border: none;
-    /* border-bottom: 2px solid #dc3545; */
     border-bottom: 2px solid black;
     text-align:center;
     background-color: rgb(197, 201, 206);
     outline: none;
     box-shadow: none;
     width: 20%;
-    margin: auto;
-/*    font-size: 2vw;
-*/}
+    margin: auto; 
+  font-size: 2vw;
+*/
 
-label {
-/*    font-size: 2vw;
-*/}
 
 input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
     /* background-color: #dc3545; */
@@ -54,8 +62,8 @@ input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
     color: black;
     /* color: white; */
     outline: none;
-    border-bottom: 2px solid #dc3545;
-    background-color: rgb(197, 201, 206);
+    border: 2px solid #dc3545;
+    /* background-color: rgb(197, 201, 206); */
     box-shadow: none;
 }
 
@@ -85,9 +93,7 @@ label, .label {
     padding: 1% 0;
 }
 
-.form-group {
-    padding: 2% 0;
-}
+
 
 #home-container {
     width: 90%;
