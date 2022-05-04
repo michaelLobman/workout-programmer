@@ -161,3 +161,29 @@ input::-webkit-inner-spin-button {
     text-align:center;
     /* font-size: medium; */
 }
+
+.navlink {
+    color:  red;
+    font-size: 20px;
+}
+
+.navlink:active {
+    color:  white;
+
+}
+
+#profile-h2 {
+    color: #dc3545;
+    font-size:  30px;
+    text-align: center;
+    padding: 3%;
+}
+
+#profile-listgroup {
+    font-size: 2vw;
+    list-style: none;
+}
+
+.profile-list-item {
+    list-style: none;
+}

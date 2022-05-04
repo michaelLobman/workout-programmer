@@ -36,8 +36,8 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
         <Navbar bg='dark' variant='dark'  >
             <Container id='navbar-container'>
                 <Navbar.Brand as={NavLink} to="/">Workout Programmer</Navbar.Brand>
-                <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-                <Nav.Link as={NavLink} to="/profile">{/*{user.user.name}'s */}Profile</Nav.Link>
+                <Nav.Link className="navlink" as={NavLink} to="/">Home</Nav.Link>
+                <Nav.Link className="navlink"as={NavLink} to="/profile">{/*{user.user.name}'s */}Profile</Nav.Link>
 {/*                {renderText}
 */}                <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button> 
             </Container>

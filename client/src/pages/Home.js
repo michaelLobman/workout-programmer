@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 
+import AdvanceBtn from '../components/AdvanceBtn';
 import ProgressPanel from '../components/ProgressPanel';
 import WorkoutAccordion from '../components/WorkoutAccordion';
 
@@ -18,6 +19,12 @@ function Home({ user, setUser, progressions, setProgressions }){
                 progressions={progressions} 
                 setProgressions= {setProgressions}
             />
+            <AdvanceBtn
+                user={user} 
+                setUser={setUser} 
+                setProgressions={setProgressions}
+            />
+
             <ProgressPanel 
                 user={user} 
                 setUser={setUser} 
