@@ -203,18 +203,14 @@ input::-webkit-inner-spin-button {
     list-style: none;
 }
 
-.plates-dropdown {
-    margin: 3%;
-    font-size: 10px;
-}
 
 .plates-li {
     font-size: large;
 }
 
-.plates-ul {
+/* .plates-ul {
     font-size: large;
-}
+} */
 
 .plates-btn {
     margin: 1% auto;
