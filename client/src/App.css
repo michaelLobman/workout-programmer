@@ -13,22 +13,23 @@ body {
 form {
     text-align: center;
 }
+
 #progress-panel-div {
-    /* background-color: rgb(141, 63, 63); */
     background-color: #dc3545;
     color: rgb(255, 255, 255);
     padding: 4% 10%;
-    border-radius: 30px;
+    text-align: center;
+    margin: 0;
 }
 
-#progress-panel-container {
-    /* background-color: rgb(141, 63, 63); */
+/* #progress-panel-container {
     background-color: #dc3545;
     color: rgb(255, 255, 255);
     padding: 4% 10%;
     border-radius: 30px;
     text-align: center;
-}
+    margin: 5% auto;
+} */
 
 input[type=text], input[type=number], input[type=password]{
     border: none;
@@ -203,7 +204,9 @@ input::-webkit-inner-spin-button {
     background-color: white;
     width: 100%;
 }
-
+#profile-card-group {
+    margin: auto;
+}
 #profile-listgroup {
     font-size: 2vw;
     list-style: none;
@@ -215,7 +218,13 @@ input::-webkit-inner-spin-button {
 
 .progression-card {
     margin: 2%;
+    text-align: center;
 }
+
+/* .progression-lg-i {
+    width: 100%;
+    margin: auto;
+} */
 
 
 .plates-li {

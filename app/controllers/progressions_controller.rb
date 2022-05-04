@@ -12,17 +12,12 @@ class ProgressionsController < ApplicationController
         user = find_user
         progression.update!(sets_completed: true)
         new_max = max(params[:weight], params[:reps])
-
         progression.update!(current_max: new_max) unless new_max < progression.baseline_max
-
-        # greater = new_max > progression.current_max ? new_max : progression.current_max
-        # progression.update!(current_max: greater)
         render json: user.progressions.order(main_ex_id: :asc)
     end
 
     def update
-        # binding.break
-        progression = Progression.find(params[:id])
+        progression = find_progression
         progression.update!(progression_params)
         render json: progression
     end

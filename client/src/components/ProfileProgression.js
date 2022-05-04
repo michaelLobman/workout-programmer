@@ -10,12 +10,16 @@ function ProfileProgression({ progression }){
 
 
 	return (
-		<Card className="progression-card">
+		<Card 
+			className="progression-card"
+			bg="danger"
+			text="light"
+		>
 			<Card.Body>
 				<Card.Title>{exercise}</Card.Title>
 				<ListGroup>
-					<ListGroup.Item variant="info">Starting Max: {baselineMax}</ListGroup.Item>
-					<ListGroup.Item variant={maxVariant}>Current Max: {currentMax}</ListGroup.Item>
+					<ListGroup.Item className="progression-lg-i" variant="info">Starting Max: {baselineMax}</ListGroup.Item>
+					<ListGroup.Item className="progression-lg-i" variant={maxVariant}>Current Max: {currentMax}</ListGroup.Item>
 				</ListGroup>
 			</Card.Body>
 		</Card>
