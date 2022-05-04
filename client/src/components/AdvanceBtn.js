@@ -1,14 +1,15 @@
 import Button from 'react-bootstrap/Button';
 
-function AdvanceBtn({ user, setUser }){
+function AdvanceBtn({ user, setUser, setProgressions }){
     
     function handleClick(){
 
         fetch(`/users/${user.id}/next_week`)
             .then(r => r.json())
-            .then(user => setUser(user))
-
-        console.log(user.progressions)
+            .then(user => {
+                setUser(user);
+                setProgressions(user.progressions);
+        })
     }
 
     return (

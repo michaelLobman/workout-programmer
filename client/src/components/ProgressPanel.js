@@ -3,7 +3,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar';
 
 import AdvanceBtn from './AdvanceBtn';
 
-function ProgressPanel({ user, setUser }){
+function ProgressPanel({ user, setUser, setProgressions }){
 
     const now = Math.round(user.current_week / 20 * 100);
 
@@ -12,7 +12,7 @@ function ProgressPanel({ user, setUser }){
             <h4>Your Progress:</h4>
             <p>Week: {user.current_week} | Phase: {user.phase}</p>
             <ProgressBar animated variant='success' label={`${now}%`} now={now} />
-            <AdvanceBtn user={user} setUser={setUser} />
+            <AdvanceBtn user={user} setUser={setUser} setProgressions={setProgressions} />
         </div>
 
     )

@@ -3,15 +3,19 @@ import { useEffect, useState } from 'react';
 import Accordion from 'react-bootstrap/Accordion'
 import ExerciseItem from './ExerciseItem';
 
-function WorkoutAccordion({ user }){
+function WorkoutAccordion({ user, progressions, setProgressions }){
 
-    const [progressions, setProgressions] = useState([]);
+    // now trying to hold the progressions in state at the App.js level
+    // hence remove the second fetch request and bifurcation of progressions
+    // from user
 
-    useEffect(() => {
-        fetch(`/progressions/user/${user.id}`)
-            .then(r => r.json())
-            .then(data => setProgressions(data))
-    }, [user])
+    // const [progressions, setProgressions] = useState([]);
+
+    // useEffect(() => {
+    //     fetch(`/progressions/user/${user.id}`)
+    //         .then(r => r.json())
+    //         .then(data => setProgressions(data))
+    // }, [user])
 
     const items = progressions.map(progression => (
         <ExerciseItem 
