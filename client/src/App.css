@@ -8,7 +8,7 @@ body {
 }
 
 #intro-container {
-    padding: 5% 0 ;
+    padding: 5% 0 2% 0 ;
 }
 /* form {
     text-align: center;
@@ -40,36 +40,28 @@ body {
     width: 70%;
 }
 
-input:focus {
-    background-color: #dc3545;
-}
-/* input[type=text], input[type=number], input[type=password]{
+input[type=text], input[type=number], input[type=password] {
+    background-color: rgb(197, 201, 206);
     border: none;
     border-bottom: 2px solid black;
-    text-align:center;
-    background-color: rgb(197, 201, 206);
-    outline: none;
-    box-shadow: none;
-    width: 20%;
-    margin: auto; 
-  font-size: 2vw;
-*/
+    border-radius: 0;
+    outline: 0;
+}
 
 
 input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
-    /* background-color: #dc3545; */
-    border: none;
-    color: black;
     /* color: white; */
     outline: none;
-    border: 2px solid #dc3545;
-    /* background-color: rgb(197, 201, 206); */
+    border: none;
+    background-color: rgb(197, 201, 206);
     box-shadow: none;
+    border-bottom: 2px solid #dc3545;
+
+
 }
 
 label, .label {
     color: #dc3545;
-
 }
 
 #workout-h2 {
