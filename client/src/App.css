@@ -21,6 +21,15 @@ form {
     border-radius: 30px;
 }
 
+#progress-panel-container {
+    /* background-color: rgb(141, 63, 63); */
+    background-color: #dc3545;
+    color: rgb(255, 255, 255);
+    padding: 4% 10%;
+    border-radius: 30px;
+    text-align: center;
+}
+
 input[type=text], input[type=number], input[type=password]{
     border: none;
     /* border-bottom: 2px solid #dc3545; */
@@ -66,7 +75,9 @@ label, .label {
 }
 
 #advance-button {
-    margin: 4% 0 0 0;
+    font-size: x-large;
+    width: 100%;
+    padding: 2%;
 }
 
 #navbar-container {
@@ -172,11 +183,15 @@ input::-webkit-inner-spin-button {
 
 }
 
+
+
 #profile-h2 {
-    color: #dc3545;
+    color: white;
     font-size:  30px;
     text-align: center;
     padding: 3%;
+    background-color: #dc3545;
+    width: 100%;
 }
 
 #profile-listgroup {

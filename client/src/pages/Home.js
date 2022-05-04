@@ -13,19 +13,13 @@ function Home({ user, setUser, progressions, setProgressions }){
 
     return (
         <Container id='home-container'>
-            <h2 id='workout-h2'>Weekly Workouts</h2>
+            <h2 id='workout-h2'>Week {user.current_week} Workouts</h2>
             <WorkoutAccordion 
                 user={user} 
                 progressions={progressions} 
                 setProgressions= {setProgressions}
             />
             <AdvanceBtn
-                user={user} 
-                setUser={setUser} 
-                setProgressions={setProgressions}
-            />
-
-            <ProgressPanel 
                 user={user} 
                 setUser={setUser} 
                 setProgressions={setProgressions}
