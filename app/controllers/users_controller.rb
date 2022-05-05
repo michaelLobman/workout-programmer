@@ -18,9 +18,19 @@ class UsersController < ApplicationController
         reset_progressions(user)
 
         new_week = user.week_id == 4 ? 1 : user.week_id + 1
-        user.update!(week_id: new_week)
-        user.update!(current_week: user.current_week + 1)
+        # combined two updates into one line of code
+        user.update!(week_id: new_week, current_week: user.current_week + 1)
         user.update!(phase: user.phase + 1) unless user.current_week % 4 != 1
+
+        render json: user
+    end
+
+    def previous_week
+        user = find_user
+        reset_progressions(user)
+        new_week = user.week_id == 1 ? 4 : user.week_id - 1
+        new_phase = new_week == 4 ? user.phase - 1 : user.phase
+        user.update!(week_id: new_week, current_week: user.current_week - 1, phase: new_phase)
 
         render json: user
     end

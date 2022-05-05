@@ -1,10 +1,10 @@
 import Button from 'react-bootstrap/Button';
 
-function AdvanceBtn({ user, setUser, setProgressions }){
+function ReturnBtn({ user, setUser, setProgressions }){
     
     function handleClick(){
 
-        fetch(`/users/${user.id}/next_week`)
+        fetch(`/users/${user.id}/previous_week`)
             .then(r => r.json())
             .then(user => {
                 setUser(user);
@@ -16,11 +16,11 @@ function AdvanceBtn({ user, setUser, setProgressions }){
         <Button 
             className='week-button'
             onClick={handleClick} 
-            variant="success"
+            variant="outline-danger"
         >
-            Continue to Week {user.current_week + 1}
+            Return to Week {user.current_week - 1}
         </Button>
     )
 }
 
-export default AdvanceBtn;
+export default ReturnBtn;

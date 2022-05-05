@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   patch '/progressions/user/:user_id/:id', to: 'progressions#update_user_progressions'
 
   get '/users/:user_id/next_week', to: 'users#next_week'
+  get '/users/:user_id/previous_week', to: 'users#previous_week'
 
   post '/signup', to: 'users#create'
   get '/me', to: 'users#show'

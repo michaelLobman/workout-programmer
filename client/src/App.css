@@ -91,10 +91,11 @@ label, .label {
     width: 100%;
 }
 
-#advance-button {
+.week-button {
     font-size: x-large;
     width: 100%;
     padding: 2%;
+    margin: 0 0 2% 0;
 }
 
 #navbar-container {
