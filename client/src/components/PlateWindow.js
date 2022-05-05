@@ -38,11 +38,6 @@ function PlateWindow({ plates }){
                     {fortyFive}{thirtyFive}{twentyFive}{ten}{five}{twoHalf}
                 </ListGroup>
             </Popover.Body>
-            {/* <Popover.Body>
-                <ul className="plates-ul">
-                    {fortyFive}{thirtyFive}{twentyFive}{ten}{five}{twoHalf}
-                </ul>
-            </Popover.Body> */}
         </Popover>
     )
 

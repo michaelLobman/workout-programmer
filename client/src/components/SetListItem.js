@@ -3,8 +3,11 @@ import { useState } from 'react';
 import PlateWindow from './PlateWindow'
 
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
 
@@ -17,11 +20,10 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
 
     ))
     
-    const { num, reps, percentage, week_id: week } = set
-    // const weight = Math.round(wMax * percentage / 5) * 5
+    const { num, reps, week_id: week } = set
     const toggleClass = completed ? 'completed-class' : null
 
-    const amrap = num === 3 && week % 4 !== 0 ? '+' : null
+    const amrap = num === 3 && week !== 4 ? '+' : null
 
 
     function handleSubmit(e){
@@ -53,7 +55,26 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
             <PlateWindow plates={plates} />
             { num === 3 ? (
             <Form id="set-form" onSubmit={handleSubmit}>
-                <Form.Group className="form-group">
+                <Container id="rep-container" fluid>
+                    <Form.Group 
+                        as={Row} 
+                        className="set-form-group"
+                        controlId="formHorizontalCompletedReps"
+                    >
+                        <Form.Label id="set-form-label" column sm={4} xs={4}>Reps Performed:</Form.Label>
+                        <Col xs={4}>
+                            <Form.Control
+                                id="set-form-input"
+                                type="number"
+                                pattern="[0-9]*"
+                                inputMode="numeric"
+                                value={completedReps}
+                                onChange={(e => setCompletedReps(e.target.value))}
+                            />
+                        </Col>
+                    </Form.Group>
+                </Container>
+                {/* <Form.Group className="form-group">
                     <Form.Label>Reps Performed:</Form.Label>
                     <Form.Control
                         id="set-input"
@@ -63,7 +84,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
                         value={completedReps}
                         onChange={(e => setCompletedReps(e.target.value))}
                     />
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group className="form-group">
                     <Button 
                         id="set-submit" 

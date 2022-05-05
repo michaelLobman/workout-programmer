@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import ExerciseForm from './ExerciseForm';
 import Intro from './Intro';
@@ -12,7 +11,6 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 
 function SignUpForm({ onSignUp }){
-    const [step, setStep] = useState(0);
     const [fullName, setFullName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -77,8 +75,6 @@ function SignUpForm({ onSignUp }){
 
 
     return (
-
-        // removing form groups above exercises, trying to go them over
         <>
             <Intro />
             <Container>

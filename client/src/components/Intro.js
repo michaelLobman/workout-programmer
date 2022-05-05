@@ -19,7 +19,12 @@ function Intro(){
                 combinations based on your one rep maximum for each of the four main lifts.
             </p>
             <p>
-                Enter your information below to get started.
+                For the exercise portion of the form, please enter the heaviest weight you 
+                have successfully lifted for the corresponding exercise as well as the respective
+                number of reps completed.
+            </p>
+            <p>
+                Enter your information below to get started. 
             </p>
         </Container>
     )
