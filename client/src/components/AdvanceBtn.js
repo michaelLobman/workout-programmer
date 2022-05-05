@@ -1,15 +1,27 @@
 import Button from 'react-bootstrap/Button';
 
 function AdvanceBtn({ user, setUser, setProgressions }){
+
+    const btnText = user.current_week === 20 ? "Restart Program with Updated PRs" : `Continue to Week ${user.current_week + 1}`
     
     function handleClick(){
 
-        fetch(`/users/${user.id}/next_week`)
-            .then(r => r.json())
-            .then(user => {
-                setUser(user);
-                setProgressions(user.progressions);
+        if (user.current_week === 20) {
+
+            fetch(`/users/${user.id}/restart`)
+                .then(r => r.json())
+                .then(user => {
+                    setUser(user);
+                    setProgressions(user.progressions)
+                })
+        } else {
+            fetch(`/users/${user.id}/next_week`)
+                .then(r => r.json())
+                .then(user => {
+                    setUser(user);
+                    setProgressions(user.progressions);
         })
+        }
     }
 
     return (
@@ -18,7 +30,7 @@ function AdvanceBtn({ user, setUser, setProgressions }){
             onClick={handleClick} 
             variant="success"
         >
-            Continue to Week {user.current_week + 1}
+            {btnText}
         </Button>
     )
 }

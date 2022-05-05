@@ -12,7 +12,7 @@ function Home({ user, setUser, progressions, setProgressions }){
 
     const phase = Math.ceil(user.current_week / 4) * 4 / 4
 
-    const renderReturn = user.current_week > 1 ? (
+    const renderReturn = user.current_week > 1 && user.current_week < 20 ? (
         <ReturnBtn
                 user={user}
                 setUser={setUser}
