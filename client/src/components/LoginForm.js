@@ -65,7 +65,7 @@ function LoginForm({ onLogin }){
                     >
                         <Form.Control 
                             className='form-input'
-                            type="text" 
+                            type="password" 
                             placeholder="Password"
                             value={password}
                             onChange={(e => setPassword(e.target.value))}
