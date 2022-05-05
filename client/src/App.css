@@ -32,33 +32,49 @@ body {
 } */
 
 
-.form-group {
-    text-align: center;
-}
-
 .form-input {
-    width: 70%;
-}
-
-input[type=text], input[type=number], input[type=password] {
     background-color: rgb(197, 201, 206);
     border: none;
     border-bottom: 2px solid black;
     border-radius: 0;
     outline: 0;
+    width: 70%;
+
 }
 
+.form-btn {
+    width: 70%;
+}
 
-input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
-    /* color: white; */
+/* input[type=text], input[type=number], input[type=password] {
+    background-color: rgb(197, 201, 206);
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    outline: 0;
+    width: 70%; */
+
+
+.form-input:focus {
     outline: none;
     border: none;
     background-color: rgb(197, 201, 206);
     box-shadow: none;
     border-bottom: 2px solid #dc3545;
-
-
 }
+
+.ex-input {
+    width: 25%;
+}
+
+/* .form-input, input[type=text]:focus, input[type=number]:focus, input[type=password]:focus {
+    outline: none;
+    border: none;
+    background-color: rgb(197, 201, 206);
+    box-shadow: none;
+    border-bottom: 2px solid #dc3545;
+} */
+
 
 label, .label {
     color: #dc3545;
@@ -235,4 +251,9 @@ input::-webkit-inner-spin-button {
     display: block;
     width: 40%;
     padding: 1%;
+}
+
+#continue-btn {
+    width: 70%;
+    margin: 5% 0;
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import ExerciseForm from './ExerciseForm';
 import Intro from './Intro';
@@ -7,7 +8,9 @@ import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { FloatingLabel } from 'react-bootstrap';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Nav from 'react-bootstrap/Nav';
+
 
 function SignUpForm({ onSignUp }){
     const [fullName, setFullName] = useState("");
@@ -71,178 +74,79 @@ function SignUpForm({ onSignUp }){
         <Alert key={error} variant='danger'>{error}</Alert>
     ))
 
-    return(
+    return (
 
         // removing form groups above exercises, trying to go them over
         <>
             <Intro />
             <Container>
-                <Form.Group className="form-group">
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Full Name"
-                        className="mb-3"
-                    >
-                        <Form.Control 
-                            className="form-input"
-                            type="text" 
-                            placeholder="Full Name"
-                            value={fullName}
-                            onChange={(e => setFullName(e.target.value))}
-                        />
-                    </FloatingLabel>
-                </Form.Group>
-                <Form.Group className="form-group">
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Username"
-                        className="mb-3"
-                    >
-                        <Form.Control 
-                            className="form-input"
-                            type="text" 
-                            placeholder="Username"
-                            value={username}
-                            onChange={(e => setUsername(e.target.value))}
-                        />
-                    </FloatingLabel>
-                </Form.Group>
-                <Form.Group className="form-group">
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Password"
-                        className="mb-3"
-                    >
-                        <Form.Control 
-                            className="form-input"
-                            type="password" 
-                            placeholder="Password"
-                            value={password}
-                            onChange={(e => setPassword(e.target.value))}
-                        />
-                    </FloatingLabel>
-                </Form.Group>
-                <Form.Group className="form-group">
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Confirm Password"
-                        className="mb-3"
-                    >
-                        <Form.Control 
-                            className="form-input"
-                            type="password" 
-                            placeholder="Confirm Password"
-                            value={passwordConf}
-                            onChange={(e => setPasswordConf(e.target.value))}
-                        />
-                    </FloatingLabel>
-                </Form.Group>
-            </Container>
-            <Container className='form-container'>
-                <Form id='signup-form' onSubmit={handleSubmit}>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Full Name</Form.Label>
-                        <Form.Control
-                            type='text'
-                            value={fullName}
-                            onChange={(e => setFullName(e.target.value))}
-                        />
+                <Form>
+                    <Form.Group className="form-group">
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label="Full Name"
+                            className="mb-3"
+                        >
+                            <Form.Control 
+                                className='form-input'
+                                type="text" 
+                                placeholder="Full Name"
+                                value={fullName}
+                                onChange={(e => setFullName(e.target.value))}
+                            />
+                        </FloatingLabel>
                     </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Username</Form.Label>
-                        <Form.Control
-                            type="text"
-                            value={username}
-                            onChange={(e => setUsername(e.target.value))}
-                        />
+                    <Form.Group className="form-group">
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label="Username"
+                            className="mb-3"
+                        >
+                            <Form.Control 
+                                className='form-input'
+                                type="text" 
+                                placeholder="Username"
+                                value={username}
+                                onChange={(e => setUsername(e.target.value))}
+                            />
+                        </FloatingLabel>
                     </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                            type='password'
-                            value={password}
-                            onChange={(e => setPassword(e.target.value))}
-                        />
+                    <Form.Group className="form-group">
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label="Password"
+                            className="mb-3"
+                        >
+                            <Form.Control 
+                                className='form-input'
+                                type="password" 
+                                placeholder="Password"
+                                value={password}
+                                onChange={(e => setPassword(e.target.value))}
+                            />
+                        </FloatingLabel>
                     </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control
-                            type='password'
-                            value={passwordConf}
-                            onChange={(e => setPasswordConf(e.target.value))}
-                        />
+                    <Form.Group className="form-group">
+                        <FloatingLabel
+                            controlId="floatingInput"
+                            label="Confirm Password"
+                            className="mb-3"
+                        >
+                            <Form.Control 
+                                className='form-input'
+                                type="password" 
+                                placeholder="Confirm Password"
+                                value={passwordConf}
+                                onChange={(e => setPasswordConf(e.target.value))}
+                            />
+                        </FloatingLabel>
                     </Form.Group>
-                    {renderExForms}
-                    {/* <h3>Squat</h3>
+                    {/* {renderExForms} */}
                     <Form.Group className='form-group'>
-                        <Form.Label>Reps</Form.Label>
-                        <Form.Control
-                        type="number"
-                        value={sReps}
-                        onChange={(e => setSReps(e.target.value))}
-                        />
-                    </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Weight</Form.Label>
-                        <Form.Control
-                            type="number"
-                            value={sWeight}
-                            onChange={(e => setSWeight(e.target.value))}
-                        />
-                    </Form.Group> */}
-                    {/* <h3>Bench Press</h3>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Reps</Form.Label>
-                        <Form.Control
-                        type="number"
-                        value={bReps}
-                        onChange={(e => setBReps(e.target.value))}
-                        />
-                    </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Weight</Form.Label>
-                        <Form.Control
-                            type="number"
-                            value={bWeight}
-                            onChange={(e => setBWeight(e.target.value))}
-                        />
-                    </Form.Group>
-                    <h3>Deadlift</h3>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Reps</Form.Label>
-                        <Form.Control
-                        type="number"
-                        value={dReps}
-                        onChange={(e => setDReps(e.target.value))}
-                        />
-                    </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Weight</Form.Label>
-                        <Form.Control
-                            type="number"
-                            value={dWeight}
-                            onChange={(e => setDWeight(e.target.value))}
-                        />
-                    </Form.Group>
-                    <h3>Military Press</h3>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Reps</Form.Label>
-                        <Form.Control
-                        type="number"
-                        value={mReps}
-                        onChange={(e => setMReps(e.target.value))}
-                        />
-                    </Form.Group>
-                    <Form.Group className='form-group'>
-                        <Form.Label>Weight</Form.Label>
-                        <Form.Control
-                            type="number"
-                            value={mWeight}
-                            onChange={(e => setMWeight(e.target.value))}
-                        />
-                    </Form.Group> */}
-                    <Form.Group className='form-group'>
-                        <Button type='submit' variant='danger'>Submit</Button>
+                        {/* <Button id='continue-btn' variant='danger' as={NavLink} to="/squat">
+                            Create Account and Continue to Exercises
+                        </Button> */}
+                        <Button id='continue-btn' type='submit' variant='danger'>Create Account and Continue to Exercises</Button>
                     </Form.Group>
                     <Form.Group className='form-group'>
                         {renderErrors}

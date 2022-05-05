@@ -1,5 +1,6 @@
 import Form from 'react-bootstrap/Form';
 
+
 import { useState } from 'react';
 
 function ExerciseForm({ exercise, exArray }){
@@ -13,10 +14,11 @@ function ExerciseForm({ exercise, exArray }){
 
     return (
         <>
-            <h3>{exercise.title}</h3>
-            <Form.Group className='form-group'>
+            <h3 className="ex-form-h3">{exercise.title}</h3>
+            <Form.Group className="form-group">
                 <Form.Label>Weight</Form.Label>
                 <Form.Control
+                    className="ex-input"
                     type="number"
                     pattern="[0-9]*"
                     inputMode="numeric"
@@ -24,14 +26,15 @@ function ExerciseForm({ exercise, exArray }){
                     onChange={(e => setWeight(e.target.value))}
                 />
             </Form.Group>
-            <Form.Group className='form-group'>
+            <Form.Group className="form-group">
                 <Form.Label>Reps</Form.Label>
                 <Form.Control
-                type="number"
-                pattern="[0-9]*"
-                inputMode="numeric"
-                value={reps}
-                onChange={(e => setReps(e.target.value))}
+                    className="ex-input"
+                    type="number"
+                    pattern="[0-9]*"
+                    inputMode="numeric"
+                    value={reps}
+                    onChange={(e => setReps(e.target.value))}
                 />
             </Form.Group>
         </>

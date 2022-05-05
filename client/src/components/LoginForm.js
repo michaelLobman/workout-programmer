@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 
 function LoginForm({ onLogin }){
@@ -41,24 +42,38 @@ function LoginForm({ onLogin }){
     return(
         <Container className='form-container'>
             <Form id='login-form' onSubmit={handleSubmit}>
-                <Form.Group className='form-group'>
-                    <Form.Label>Username</Form.Label>
-                    <Form.Control
-                        type="text"
-                        value={username}
-                        onChange={(e => setUsername(e.target.value))}
-                    />
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Username"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className='form-input'
+                            type="text" 
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e => setUsername(e.target.value))}
+                        />
+                    </FloatingLabel>
+                </Form.Group>
+                <Form.Group className="form-group">
+                    <FloatingLabel
+                        controlId="floatingInput"
+                        label="Password"
+                        className="mb-3"
+                    >
+                        <Form.Control 
+                            className='form-input'
+                            type="text" 
+                            placeholder="Password"
+                            value={password}
+                            onChange={(e => setPassword(e.target.value))}
+                        />
+                    </FloatingLabel>
                 </Form.Group>
                 <Form.Group className='form-group'>
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control
-                        type='password'
-                        value={password}
-                        onChange={(e => setPassword(e.target.value))}
-                    />
-                </Form.Group>
-                <Form.Group className='form-group'>
-                    <Button type='submit' variant='danger'>Submit</Button>
+                    <Button className='form-btn' type='submit' variant='danger'>Login</Button>
                 </Form.Group>
                 <Form.Group className='form-group'>
                     {renderErrors}
