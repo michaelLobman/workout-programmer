@@ -55,25 +55,23 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
             <PlateWindow plates={plates} />
             { num === 3 ? (
             <Form id="set-form" onSubmit={handleSubmit}>
-                <Container id="rep-container" fluid>
-                    <Form.Group 
-                        as={Row} 
-                        className="set-form-group"
-                        controlId="formHorizontalCompletedReps"
-                    >
-                        <Form.Label id="set-form-label" column sm={4} xs={4}>Reps Performed:</Form.Label>
-                        <Col xs={4}>
-                            <Form.Control
-                                id="set-form-input"
-                                type="number"
-                                pattern="[0-9]*"
-                                inputMode="numeric"
-                                value={completedReps}
-                                onChange={(e => setCompletedReps(e.target.value))}
-                            />
-                        </Col>
-                    </Form.Group>
-                </Container>
+                <Form.Group 
+                    as={Row} 
+                    className="set-form-group"
+                    controlId="formHorizontalCompletedReps"
+                >
+                    <Form.Label id="set-form-label" column sm={7} xs={7}>Reps Performed:</Form.Label>
+                    <Col sm={2} xs={3}>
+                        <Form.Control
+                            id="set-form-input"
+                            type="number"
+                            pattern="[0-9]*"
+                            inputMode="numeric"
+                            value={completedReps}
+                            onChange={(e => setCompletedReps(e.target.value))}
+                        />
+                    </Col>
+                </Form.Group>
                 {/* <Form.Group className="form-group">
                     <Form.Label>Reps Performed:</Form.Label>
                     <Form.Control
