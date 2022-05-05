@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/users/:user_id/next_week', to: 'users#next_week'
   get '/users/:user_id/previous_week', to: 'users#previous_week'
 
+  get '/users/:user_id/restart', to: 'users#restart'
+
   post '/signup', to: 'users#create'
   get '/me', to: 'users#show'
 
