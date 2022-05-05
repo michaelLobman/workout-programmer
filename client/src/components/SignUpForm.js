@@ -61,7 +61,7 @@ function SignUpForm({ onSignUp }){
         })
             .then(r => {
                 if (r.ok){
-                    r.json().then(user => onSignUp(user));
+                    r.json().then(user => onSignUp(user, user.progressions));
                 } else {
                     r.json().then(error => setErrors(error.errors))
                 }
@@ -78,10 +78,10 @@ function SignUpForm({ onSignUp }){
         <>
             <Intro />
             <Container>
-                <Form>
+                <Form id="signup-form" onSubmit={handleSubmit}>
                     <Form.Group className="form-group">
                         <FloatingLabel
-                            controlId="floatingInput"
+                            controlId="floatingName"
                             label="Full Name"
                             className="mb-3"
                         >
@@ -96,7 +96,7 @@ function SignUpForm({ onSignUp }){
                     </Form.Group>
                     <Form.Group className="form-group">
                         <FloatingLabel
-                            controlId="floatingInput"
+                            controlId="floatingUsername"
                             label="Username"
                             className="mb-3"
                         >
@@ -111,7 +111,7 @@ function SignUpForm({ onSignUp }){
                     </Form.Group>
                     <Form.Group className="form-group">
                         <FloatingLabel
-                            controlId="floatingInput"
+                            controlId="floatingPassword"
                             label="Password"
                             className="mb-3"
                         >
@@ -126,7 +126,7 @@ function SignUpForm({ onSignUp }){
                     </Form.Group>
                     <Form.Group className="form-group">
                         <FloatingLabel
-                            controlId="floatingInput"
+                            controlId="floatingPasswordConf"
                             label="Confirm Password"
                             className="mb-3"
                         >

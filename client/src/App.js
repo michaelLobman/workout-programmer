@@ -28,8 +28,8 @@ function App(){
 
   // if (!user) return <Login setUser={setUser} />
 
-  if (!user) return <Login onLogin={onLogin} setUser={setUser} />
-
+  if (!user) return <Login onLogin={onLogin} />
+  
   return (
     <>
       <NavBar user={user} setUser={setUser} />

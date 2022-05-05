@@ -20,7 +20,7 @@ function ExerciseForm({ exercise, exArray }){
             <Form.Group 
                 as={Row} 
                 className="ex-form-group"
-                controlId="formHorizontalWeight"
+                controlId={`formWeight${exercise.title}`}
             >
                 <Form.Label column sm={2}>Weight:</Form.Label>
                 <Col sm={8}>
@@ -37,7 +37,7 @@ function ExerciseForm({ exercise, exArray }){
             <Form.Group 
                 as={Row} 
                 className="ex-form-group"
-                controlId="formHorizontalReps"
+                controlId={`formReps${exercise.title}`}
             >
                 <Form.Label column sm={2}>Reps:</Form.Label>
                 <Col sm={8}>
