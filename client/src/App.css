@@ -257,3 +257,26 @@ input::-webkit-inner-spin-button {
     width: 70%;
     margin: 5% 0;
 }
+
+.ex-form-group {
+    padding: 2%;
+}
+
+#ex-form-h3 {
+    text-decoration: underline;
+    padding: 3% 0 0 0;
+}
+
+.ex-input {
+    text-align: center;
+    padding: 1%;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-size: larger;
+}
+
+.ex-input:focus {
+    background-color: #dc3545;
+    border: 2px solid white;
+    color: white;
+}

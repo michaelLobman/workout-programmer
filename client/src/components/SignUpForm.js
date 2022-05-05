@@ -9,10 +9,10 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Nav from 'react-bootstrap/Nav';
 
 
 function SignUpForm({ onSignUp }){
+    const [step, setStep] = useState(0);
     const [fullName, setFullName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -73,6 +73,8 @@ function SignUpForm({ onSignUp }){
     const renderErrors = errors.map(error => (
         <Alert key={error} variant='danger'>{error}</Alert>
     ))
+
+
 
     return (
 
@@ -141,12 +143,9 @@ function SignUpForm({ onSignUp }){
                             />
                         </FloatingLabel>
                     </Form.Group>
-                    {/* {renderExForms} */}
+                    {renderExForms}
                     <Form.Group className='form-group'>
-                        {/* <Button id='continue-btn' variant='danger' as={NavLink} to="/squat">
-                            Create Account and Continue to Exercises
-                        </Button> */}
-                        <Button id='continue-btn' type='submit' variant='danger'>Create Account and Continue to Exercises</Button>
+                        <Button id='continue-btn' type='submit' variant='danger'>Create Account</Button>
                     </Form.Group>
                     <Form.Group className='form-group'>
                         {renderErrors}
