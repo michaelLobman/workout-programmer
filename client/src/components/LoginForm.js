@@ -44,7 +44,7 @@ function LoginForm({ onLogin }){
             <Form id='login-form' onSubmit={handleSubmit}>
                 <Form.Group className="form-group">
                     <FloatingLabel
-                        controlId="floatingInput"
+                        controlId="floatingUsername"
                         label="Username"
                         className="mb-3"
                     >
@@ -59,7 +59,7 @@ function LoginForm({ onLogin }){
                 </Form.Group>
                 <Form.Group className="form-group">
                     <FloatingLabel
-                        controlId="floatingInput"
+                        controlId="floatingPassword"
                         label="Password"
                         className="mb-3"
                     >
