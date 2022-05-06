@@ -38,7 +38,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
     return (
         <Navbar bg='dark' variant='dark'  >
             <Container id='navbar-container'>
-                <Navbar.Brand as={NavLink} to="/">Workout Programmer</Navbar.Brand>
+                <Navbar.Brand id="navbar-brand" as={NavLink} to="/">Workout Programmer</Navbar.Brand>
                 {/* <Nav.Link 
                     disabled={renderNavs} 
                     as={NavLink} 
