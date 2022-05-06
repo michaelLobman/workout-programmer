@@ -8,13 +8,8 @@ import { NavLink } from 'react-router-dom';
 
 
 function NavBar({ user, setUser, showLogin, setShowLogin }){
-
-    let buttonText;
-
-    buttonText = showLogin ? 'Sign Up' : 'Login';
-    if (user) buttonText = 'Logout';
-
-    const renderNavs = user ? false : true;
+    
+    const buttonText = showLogin ? 'Sign Up' : 'Login';
 
     const style = {
         color: "#dc3545",
@@ -95,9 +90,8 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                ): null }
-               
-                {/* <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button>  */}
+                ): <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button>
+            }
             </Container>
         </Navbar>
     )
