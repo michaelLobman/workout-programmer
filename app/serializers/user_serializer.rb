@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :username, :current_week, :phase
+  attributes :id, :name, :email, :current_week, :phase
   has_many :progressions
   
   belongs_to :week

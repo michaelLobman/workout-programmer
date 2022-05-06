@@ -12,7 +12,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
 function SignUpForm({ onSignUp }){
     const [fullName, setFullName] = useState("");
-    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConf, setPasswordConf] = useState("");
 
@@ -46,7 +46,7 @@ function SignUpForm({ onSignUp }){
 
         const user = {
             full_name: fullName,
-            username,
+            email,
             password,
             password_confirmation: passwordConf,
             exercises: exerciseArray
@@ -96,16 +96,16 @@ function SignUpForm({ onSignUp }){
                     </Form.Group>
                     <Form.Group className="form-group">
                         <FloatingLabel
-                            controlId="floatingUsername"
-                            label="Username"
+                            controlId="floatingEmail"
+                            label="Email"
                             className="mb-3"
                         >
                             <Form.Control 
                                 className='form-input'
                                 type="text" 
-                                placeholder="Username"
-                                value={username}
-                                onChange={(e => setUsername(e.target.value))}
+                                placeholder="Email"
+                                value={email}
+                                onChange={(e => setEmail(e.target.value))}
                             />
                         </FloatingLabel>
                     </Form.Group>

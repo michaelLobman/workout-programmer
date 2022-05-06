@@ -6,7 +6,7 @@ end
 
 user = User.create!(
     full_name: 'Mike Lobman', 
-    username: 'mlobman',
+    email: 'michael.lobman@gmail.com',
     password: 'admin'
 )
 

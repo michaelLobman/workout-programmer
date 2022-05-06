@@ -6,16 +6,19 @@ import Container from 'react-bootstrap/Container';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 
+import ForgotPassword from "./ForgotPassword"
+
 function LoginForm({ onLogin }){
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    const [errors, setErrors] = useState([])
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errors, setErrors] = useState([]);
+    const [showForgot, setShowForgot] = useState(false);
 
     function handleSubmit(e){
         e.preventDefault();
 
         const user = {
-            username,
+            email,
             password,
         }
 
@@ -39,21 +42,21 @@ function LoginForm({ onLogin }){
         <Alert key={error} variant='danger'>{error}</Alert>
     ))
 
-    return(
+    return (
         <Container className='form-container'>
             <Form id='login-form' onSubmit={handleSubmit}>
                 <Form.Group className="form-group">
                     <FloatingLabel
-                        controlId="floatingUsername"
-                        label="Username"
+                        controlId="floatingEmail"
+                        label="Email"
                         className="mb-3"
                     >
                         <Form.Control 
                             className='form-input'
                             type="text" 
-                            placeholder="Username"
-                            value={username}
-                            onChange={(e => setUsername(e.target.value))}
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e => setEmail(e.target.value))}
                         />
                     </FloatingLabel>
                 </Form.Group>
@@ -79,6 +82,8 @@ function LoginForm({ onLogin }){
                     {renderErrors}
                 </Form.Group>
             </Form>
+            <Button onClick={(() => setShowForgot(!showForgot))}>Forgot Password?</Button>
+            {showForgot ? <ForgotPassword /> : null}
         </Container>
         
     )

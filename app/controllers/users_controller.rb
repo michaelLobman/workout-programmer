@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     # do i need week_id here? I don't think so...
 
     def user_params
-        params.permit(:username, :password, :full_name)
+        params.permit(:email, :password, :full_name)
     end
 
     def find_user
