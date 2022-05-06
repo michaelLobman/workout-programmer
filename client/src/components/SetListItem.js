@@ -53,8 +53,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
             reps: parseInt(completedReps),
             weight,
         }
-
-        console.log(max)
         fetch(`/progressions/user/${userId}/${id}`, {
             method: "PATCH",
             headers: {
