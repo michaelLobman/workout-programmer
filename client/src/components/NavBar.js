@@ -60,7 +60,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                     Profile
                 </Nav.Link> */}
                 {user ? (
-                     <Dropdown id="user-dropdown">
+                     <Dropdown align="end" id="user-dropdown">
                         <Dropdown.Toggle size="lg" variant="outline-danger">{user.name}</Dropdown.Toggle>
                         <Dropdown.Menu>
                             <Dropdown.Item
