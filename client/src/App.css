@@ -211,7 +211,7 @@ input::-webkit-inner-spin-button {
 
 .plates-btn {
     margin: 1% auto;
-    font-size: small;
+    font-size: medium;
     display: block;
     width: auto;
     padding: 2%;
@@ -302,10 +302,11 @@ input::-webkit-inner-spin-button {
 }
 
 #asst-ex-item {
-    font-size: larger;
+    font-size: medium;
 }
 
 #asst-ex-h3 {
+    font-size: large;
     background-color: #dc3545;
     padding: 2%;
     color: white;

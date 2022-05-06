@@ -47,7 +47,7 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
     ))
 
     const displaySetsOrAsst = completed ? renderAsstExes : renderSets
-    const renderText = completed ? <h3 id="asst-ex-h3">Assistant Exercises</h3> : null
+    const renderText = completed ? <h3 id="asst-ex-h3">Assistance Exercises</h3> : null
 
     return (
         <Accordion.Item eventKey={id}>
