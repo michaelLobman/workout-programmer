@@ -17,12 +17,13 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
     const renderNavs = user ? false : true;
 
     const style = {
-        color: "white",
-        fontSize: "larger"
+        color: "#dc3545",
     }
 
     const activeStyle = {
-        color: "#dc3545"
+        color: "white",
+        backgroundColor: "#dc3545"
+        
     }
         
     function handleClick(){
@@ -70,6 +71,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                             <Dropdown.Item
                                 as={NavLink}
                                 exact
+                                style={style}
                                 activeStyle={activeStyle}
                                 to="/"
                             >
@@ -77,6 +79,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                             </Dropdown.Item>
                             <Dropdown.Item
                                 as={NavLink}
+                                style={style}
                                 activeStyle={activeStyle}
                                 to="/profile"
                             >
@@ -85,6 +88,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                             <Dropdown.Divider/>
                             <Dropdown.Item
                                 as={Button}
+                                style={style}
                                 onClick={handleClick}
                             >
                                 Logout

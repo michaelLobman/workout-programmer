@@ -296,3 +296,7 @@ input::-webkit-inner-spin-button {
 #user-dropdown {
     margin: 0 3% 0 0 ;
 }
+
+#user-dropdown:active {
+    color: green;
+}
