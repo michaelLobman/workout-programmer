@@ -6,13 +6,10 @@ import Container from 'react-bootstrap/Container';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 
-import ForgotPassword from "./ForgotPassword"
-
 function LoginForm({ onLogin }){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
-    const [showForgot, setShowForgot] = useState(false);
 
     function handleSubmit(e){
         e.preventDefault();
@@ -37,9 +34,6 @@ function LoginForm({ onLogin }){
                 }
             })
     }
-
-
-    const forgotText = showForgot ? "Rememered Password!" : "Forgot Password?"
 
     const renderErrors = errors.map(error => (
         <Alert key={error} variant='danger'>{error}</Alert>
@@ -85,8 +79,6 @@ function LoginForm({ onLogin }){
                     {renderErrors}
                 </Form.Group>
             </Form>
-            <Button onClick={(() => setShowForgot(!showForgot))}>{forgotText}</Button>
-            {showForgot ? <ForgotPassword /> : null}
         </Container>
         
     )
