@@ -303,3 +303,14 @@ input::-webkit-inner-spin-button {
 #user-dropdown:active {
     color: green;
 }
+
+#asst-ex-item {
+    font-size: larger;
+}
+
+#asst-ex-h3 {
+    background-color: #dc3545;
+    padding: 2%;
+    color: white;
+
+}

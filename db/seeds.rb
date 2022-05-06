@@ -151,8 +151,62 @@ AsstEx.create!([
     },
     {
         main_ex_id: 1,
-        title: "Planks",
+        title: "Calf Raises",
         sets: 5,
-        reps: 60
+        reps: 20
+    },
+    {
+        main_ex_id: 2,
+        title: "DB Bench Press",
+        sets: 5,
+        reps: 15,
+    },
+    {
+        main_ex_id: 2,
+        title: "Seated Cable Row",
+        sets: 5,
+        reps: 10
+    },
+    {
+        main_ex_id: 2,
+        title: "Dips",
+        sets: 5,
+        reps: 15
+    },
+    {
+        main_ex_id: 3,
+        title: "Single Leg RDL",
+        sets: 5,
+        reps: 10
+    },
+    {
+        main_ex_id: 3,
+        title: "Leg Press",
+        sets: 5,
+        reps: 12
+    },
+    {
+        main_ex_id: 3,
+        title: "Box Jumps",
+        sets: 5,
+        reps: 10
+    },
+    {
+        main_ex_id: 4,
+        title: "DB Military Press",
+        sets: 5,
+        reps: 15
+    },
+    {
+        main_ex_id: 4,
+        title: "T-Bar Row",
+        sets: 5,
+        reps: 10
+    },
+    {
+        main_ex_id: 4,
+        title: "DB Curls",
+        sets: 5,
+        reps: 12
     }
 ])

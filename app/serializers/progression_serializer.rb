@@ -1,5 +1,5 @@
 class ProgressionSerializer < ActiveModel::Serializer
-  attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates
+  attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates, :asst_exes
   # :asst_exes
 
   # I believe below line is redundant
@@ -9,13 +9,13 @@ class ProgressionSerializer < ActiveModel::Serializer
 
   @@plates = [45,35,25,10,5, 2.5]
 
-
-  #sloppy way of doing this too...
-
   def exercise
-    MainEx.find(self.object.main_ex_id).title
+    self.object.main_ex.title
   end
 
+  def asst_exes
+    self.object.main_ex.asst_exes
+  end
 
   def weights_plates
     base = self.object.w_max
@@ -28,12 +28,7 @@ class ProgressionSerializer < ActiveModel::Serializer
     arr
   end
 
-
-  # sloppy way of doing this... 
-
-  def asst_exes
-    MainEx.find(self.object.main_ex_id).asst_exes
-  end
+  
 
   private
 

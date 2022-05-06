@@ -5,6 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Form from 'react-bootstrap/Form'
 import ListGroup from 'react-bootstrap/ListGroup'
 
+import AsstExItem from './AsstExItem';
 import SetListItem from './SetListItem';
 
 function ExerciseItem({ progression, sets, setProgressions, userId }){
@@ -12,8 +13,18 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
 
     // const [reps, setReps] = useState()
 
-    const {exercise, main_ex_id: exId, current_max: currentMax, w_max: wMax, id, sets_completed, weights_plates: wP } = progression
-    let headerClass = sets_completed ? 'completed-class' : null
+    const {
+            exercise, 
+            main_ex_id: exId, 
+            current_max: currentMax, 
+            w_max: wMax, 
+            id, 
+            sets_completed, 
+            weights_plates: wP, 
+            asst_exes: asstExes 
+        } = progression
+
+    let completed = sets_completed ? 'completed-class' : null
     const numText = sets[2].reps === 1 ? "5 – 3 – 1" : `3 x ${sets[0].reps}`
     const renderSets = sets.map(set => (
 
@@ -31,14 +42,22 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
         />
     ))
 
+    const renderAsstExes = asstExes.map(ex => (
+        <AsstExItem ex={ex} key={ex.id} />
+    ))
+
+    const displaySetsOrAsst = completed ? renderAsstExes : renderSets
+    const renderText = completed ? <h3 id="asst-ex-h3">Assistant Exercises</h3> : null
+
     return (
         <Accordion.Item eventKey={id}>
-            <Accordion.Header className={headerClass}>
+            <Accordion.Header className={completed}>
                 <h2 className="ex-text">{exercise} {numText}</h2>
             </Accordion.Header>
             <Accordion.Body>
+                {renderText}
                 <ListGroup>
-                    {renderSets}
+                    {displaySetsOrAsst}
                 </ListGroup>
             </Accordion.Body>
         </Accordion.Item>
