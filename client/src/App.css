@@ -274,16 +274,19 @@ input::-webkit-inner-spin-button {
 
 #set-form-input {
     background-color: white;
+    color:#dc3545;
     border-radius: 0;
     /* color: #dc3545; */
-    border-bottom: solid 1px;
+    border: solid 2px #dc3545;
     text-decoration: none;
     text-align: center;
 
 }
 
-#set-input:focus {
-    border-bottom: solid 1px #dc3545;
+#set-form-input:focus {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: none;
     text-decoration: none;
 }
 

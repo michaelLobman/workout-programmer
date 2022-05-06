@@ -136,10 +136,10 @@ Progression.create!([
     }
 ])
 
-AsstExes.create!([
+AsstEx.create!([
     {
         main_ex_id: 1,
-        title: "Good Mornings"
+        title: "Good Mornings",
         sets: 5,
         reps: 10
     },
@@ -147,8 +147,8 @@ AsstExes.create!([
         main_ex_id: 1,
         title: "Lunges",
         sets: 5,
-        reps: 15,
-    }
+        reps: 15
+    },
     {
         main_ex_id: 1,
         title: "Planks",
@@ -156,7 +156,3 @@ AsstExes.create!([
         reps: 60
     }
 ])
-
-t.integer "main_ex_id"
-t.string "title"
-t.string "upper_lower"

@@ -1,8 +1,17 @@
 class ProgressionSerializer < ActiveModel::Serializer
   attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates
+  # :asst_exes
+
+  # I believe below line is redundant
+
+  belongs_to :main_ex
 
 
   @@plates = [45,35,25,10,5, 2.5]
+
+
+  #sloppy way of doing this too...
+
   def exercise
     MainEx.find(self.object.main_ex_id).title
   end
@@ -14,30 +23,16 @@ class ProgressionSerializer < ActiveModel::Serializer
     self.object.user.ex_sets.each do |set|
       # arr << nearest_five(set.percentage * base)
       weight = nearest_five(set.percentage * base)
-
       arr << { weight: weight, plates: determine_plates(weight, @@plates) }
-
     end
-
     arr
+  end
 
 
-  #   hash = {}
+  # sloppy way of doing this... 
 
-  #   self.object.user.ex_sets
-
-
-  #   # each instance has a percentage
-  #   sets = self.object.user.ex_sets
-
-  #   # each instance of progression has a baseline_max
-  #   self.object.user.progressions.each |progression| do
-  #     weight = progression.baseline_max
-  #   end
-
-
-  #   binding.break
-
+  def asst_exes
+    MainEx.find(self.object.main_ex_id).asst_exes
   end
 
   private

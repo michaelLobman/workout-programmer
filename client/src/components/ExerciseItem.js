@@ -31,10 +31,6 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
         />
     ))
 
-    // function handleSubmit(e){
-    //     e.preventDefault();
-    // }
-
     return (
         <Accordion.Item eventKey={id}>
             <Accordion.Header className={headerClass}>

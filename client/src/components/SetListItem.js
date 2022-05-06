@@ -29,7 +29,6 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
         <Form.Group 
             as={Row} 
             className="set-form-group"
-            controlId="formHorizontalCompletedReps"
         >
             <Form.Label id="set-form-label" column sm={7} xs={7}>Reps Performed:</Form.Label>
             <Col sm={2} xs={3}>
