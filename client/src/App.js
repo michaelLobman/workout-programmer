@@ -27,12 +27,7 @@ function App(){
     setProgressions(progressions);
   }
 
-  // if (!user) return <Login setUser={setUser} />
-
   if (!user) return <Login onLogin={onLogin} />
-
-  console.log(user)
-  // console.log(progressions)
   
   return (
     <>

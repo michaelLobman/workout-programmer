@@ -30,8 +30,8 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
             as={Row} 
             className="set-form-group"
         >
-            <Form.Label id="set-form-label" column sm={7} xs={7}>Reps Performed:</Form.Label>
-            <Col sm={2} xs={3}>
+            <Form.Label id="set-form-label" column>Reps:</Form.Label>
+            <Col>
                 <Form.Control
                     id="set-form-input"
                     type="number"
@@ -68,7 +68,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
     return (
         <ListGroup.Item>
             <h2 className={toggleClass} id="set-text">
-                {reps} {amrap} reps @ {weight} pounds 
+                {reps} {amrap} reps @ {weight} <em>lbs</em> 
             </h2>
             <PlateWindow plates={plates} />
             { num === 3 ? (

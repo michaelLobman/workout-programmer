@@ -145,9 +145,8 @@ input::-webkit-inner-spin-button {
    font-size: larger;
 }
 #set-text {
-    font-size: x-large;
-  display: inline-flex;
-
+    font-size: larger;
+    display: inline-flex;
 }
 
 
@@ -207,15 +206,15 @@ input::-webkit-inner-spin-button {
 
 
 .plates-li {
-    font-size: large;
+    font-size: medium;
 }
 
 .plates-btn {
     margin: 1% auto;
-    font-size: medium;
+    font-size: small;
     display: block;
-    width: 40%;
-    padding: 1%;
+    width: auto;
+    padding: 2%;
 }
 
 #continue-btn {
@@ -253,17 +252,15 @@ input::-webkit-inner-spin-button {
     text-align: center;
     margin: auto;
 }
-
-#set-form-label {
-    margin: auto;
-    text-align: center;
-}
-
 */
 
 #rep-container{ 
     margin: auto;
     text-align: center;
+}
+
+#set-form-label {
+    text-align: right;
 }
 
 .set-form-group {
@@ -273,6 +270,7 @@ input::-webkit-inner-spin-button {
 } 
 
 #set-form-input {
+    width: 50%;
     background-color: white;
     color:#dc3545;
     border-radius: 0;
@@ -280,7 +278,6 @@ input::-webkit-inner-spin-button {
     border: solid 2px #dc3545;
     text-decoration: none;
     text-align: center;
-
 }
 
 #set-form-input:focus {
