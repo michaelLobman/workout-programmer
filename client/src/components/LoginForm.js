@@ -38,6 +38,9 @@ function LoginForm({ onLogin }){
             })
     }
 
+
+    const forgotText = showForgot ? "Rememered Password!" : "Forgot Password?"
+
     const renderErrors = errors.map(error => (
         <Alert key={error} variant='danger'>{error}</Alert>
     ))
@@ -82,7 +85,7 @@ function LoginForm({ onLogin }){
                     {renderErrors}
                 </Form.Group>
             </Form>
-            <Button onClick={(() => setShowForgot(!showForgot))}>Forgot Password?</Button>
+            <Button onClick={(() => setShowForgot(!showForgot))}>{forgotText}</Button>
             {showForgot ? <ForgotPassword /> : null}
         </Container>
         

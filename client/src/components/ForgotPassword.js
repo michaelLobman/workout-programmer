@@ -7,9 +7,19 @@ import Form from 'react-bootstrap/Form';
 function ForgotPassword() {
 
     const [email, setEmail] = useState("");
+    const [response, setResponse] = useState(false);
 
     function handleSubmit(e){
         e.preventDefault();
+        fetch('/password/reset', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(email)
+        })
+            .then(r => r.json())
+            .then(response => setResponse(response.response))
         
     }
 
@@ -33,6 +43,7 @@ function ForgotPassword() {
             <Form.Group className='form-group'>
                 <Button className='form-btn' type='submit' variant='danger'>Reset Password</Button>
             </Form.Group>
+            {response ? <p>{response}</p>: null}
         </Form>
 
     )

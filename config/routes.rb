@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :ex_sets, only: [:show]
   resources :progressions, only: [:update]
 
-  get '/progressions/user/:user_id', to: 'progressions#index_user_progressions'
+  # route no longer used
+  # get '/progressions/user/', to: 'progressions#index_user_progressions'
+  
   patch '/progressions/user/:user_id/:id', to: 'progressions#update_user_progressions'
 
   get '/users/:user_id/next_week', to: 'users#next_week'
@@ -15,6 +17,9 @@ Rails.application.routes.draw do
 
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
+
+  get '/password/reset', to: 'password_resets#new'
+  post '/password/reset', to: 'password_resets#create'
 
   get '*path',
     to: 'fallback#index',
