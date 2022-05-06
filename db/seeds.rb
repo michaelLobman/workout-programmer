@@ -135,3 +135,28 @@ Progression.create!([
         current_max: 130
     }
 ])
+
+AsstExes.create!([
+    {
+        main_ex_id: 1,
+        title: "Good Mornings"
+        sets: 5,
+        reps: 10
+    },
+    {
+        main_ex_id: 1,
+        title: "Lunges",
+        sets: 5,
+        reps: 15,
+    }
+    {
+        main_ex_id: 1,
+        title: "Planks",
+        sets: 5,
+        reps: 60
+    }
+])
+
+t.integer "main_ex_id"
+t.string "title"
+t.string "upper_lower"
