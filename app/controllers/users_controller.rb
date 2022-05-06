@@ -7,7 +7,8 @@ class UsersController < ApplicationController
             # binding.break
             ex_id = MainEx.find(exercise[:id]).id
             max = max(exercise[:weight], exercise[:reps])
-            user.progressions.create!(main_ex_id: ex_id, baseline_max: max)
+            # add in current max as max - have to make sure this doesn't mess the stats...
+            user.progressions.create!(main_ex_id: ex_id, baseline_max: max, current_max: max)
         end
         session[:user_id] = user.id
         render json: user, status: :created
@@ -33,6 +34,18 @@ class UsersController < ApplicationController
         user.update!(week_id: new_week, current_week: user.current_week - 1, phase: new_phase)
 
         render json: user
+    end
+
+    def restart
+        user = find_user
+        reset_progressions(user)
+        user.update!(week_id: 1, current_week: 1)
+        user.progressions.each do |progression|
+            progression.update!(baseline_max: progression.current_max)
+        end
+
+        render json: user
+
     end
 
     

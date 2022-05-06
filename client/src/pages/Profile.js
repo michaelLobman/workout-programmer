@@ -13,7 +13,7 @@ function Profile({ progressions, user }) {
 	return (
 		<>
 			<ProgressPanel user={user} />
-			<h3 id="profile-h3">Exercise Progressions</h3>
+			<h3 id="profile-h3">Exercise Progressions and Personal Records (PRs)</h3>
 			<CardGroup id="profile-card-group">
 				{renderedProgressions}
 			</CardGroup>

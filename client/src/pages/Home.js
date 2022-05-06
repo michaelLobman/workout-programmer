@@ -6,7 +6,7 @@ import WorkoutAccordion from '../components/WorkoutAccordion';
 /* now passing down progressions and setProgressions as props */
 
 function Home({ user, setUser, progressions, setProgressions }){
-    const renderReturn = user.current_week > 1 && user.current_week < 20 ? (
+    const renderReturn = user.current_week > 1 ? (
         <ReturnBtn
                 user={user}
                 setUser={setUser}

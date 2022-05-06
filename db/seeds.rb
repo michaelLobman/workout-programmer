@@ -114,20 +114,25 @@ Progression.create!([
         main_ex_id: 1,
         user_id: 1,
         baseline_max: 310,
+        current_max: 310,
+
     },
     {
         main_ex_id: 2,
         user_id: 1,
         baseline_max: 220,
+        current_max: 220
     },
     {
         main_ex_id: 3,
         user_id: 1,
         baseline_max: 320,
+        current_max: 320
     },
     {
         main_ex_id: 4,
         user_id: 1,
-        baseline_max: 130
+        baseline_max: 130,
+        current_max: 130
     }
 ])

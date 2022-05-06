@@ -3,11 +3,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 function ProfileProgression({ progression }){
 
-	const {baseline_max: baselineMax, current_max, exercise } = progression
-	const currentMax = current_max > 0 ? current_max : baselineMax;
-
+	const {baseline_max: baselineMax, current_max: currentMax, exercise } = progression
 	const maxVariant = currentMax !== baselineMax ? "success" : "danger"
-
 
 	return (
 		<Card 
@@ -18,8 +15,8 @@ function ProfileProgression({ progression }){
 			<Card.Body>
 				<Card.Title>{exercise}</Card.Title>
 				<ListGroup>
-					<ListGroup.Item className="progression-lg-i" variant="info">Starting Max: {baselineMax}</ListGroup.Item>
-					<ListGroup.Item className="progression-lg-i" variant={maxVariant}>Current Max: {currentMax}</ListGroup.Item>
+					<ListGroup.Item className="progression-lg-i" variant="info">Starting PR: {baselineMax}</ListGroup.Item>
+					<ListGroup.Item className="progression-lg-i" variant={maxVariant}>Current PR: {currentMax}</ListGroup.Item>
 				</ListGroup>
 			</Card.Body>
 		</Card>
