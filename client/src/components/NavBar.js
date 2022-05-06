@@ -1,9 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import { getDropdownMenuPlacement } from 'react-bootstrap/esm/DropdownMenu';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from  'react-bootstrap/Navbar';
-import ProgressBar from 'react-bootstrap/ProgressBar'
 
 import { NavLink } from 'react-router-dom';
 
@@ -26,8 +25,6 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
         color: "#dc3545"
     }
         
-
-
     function handleClick(){
         if (user) {
             fetch('/logout', {
@@ -46,7 +43,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
         <Navbar bg='dark' variant='dark'  >
             <Container id='navbar-container'>
                 <Navbar.Brand as={NavLink} to="/">Workout Programmer</Navbar.Brand>
-                <Nav.Link 
+                {/* <Nav.Link 
                     disabled={renderNavs} 
                     as={NavLink} 
                     style={style}
@@ -64,9 +61,39 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                     style={style}
                     activeStyle={activeStyle}
                 >
-                    {/*{user.user.name}'s */}Profile
-                </Nav.Link>
-                <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button> 
+                    Profile
+                </Nav.Link> */}
+                {user ? (
+                     <Dropdown id="user-dropdown">
+                        <Dropdown.Toggle size="lg" variant="outline-danger">{user.name}</Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            <Dropdown.Item
+                                as={NavLink}
+                                exact
+                                activeStyle={activeStyle}
+                                to="/"
+                            >
+                                Workouts
+                            </Dropdown.Item>
+                            <Dropdown.Item
+                                as={NavLink}
+                                activeStyle={activeStyle}
+                                to="/profile"
+                            >
+                                Profile
+                            </Dropdown.Item>
+                            <Dropdown.Divider/>
+                            <Dropdown.Item
+                                as={Button}
+                                onClick={handleClick}
+                            >
+                                Logout
+                            </Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                ): null }
+               
+                {/* <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button>  */}
             </Container>
         </Navbar>
     )

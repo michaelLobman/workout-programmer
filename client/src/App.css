@@ -164,12 +164,6 @@ input::-webkit-inner-spin-button {
     /* font-size: medium; */
 }
 
-.navlink {
-    color:  #dc3545;
-}
-
-
-
 
 #profile-h2 {
     color: white;
@@ -297,4 +291,8 @@ input::-webkit-inner-spin-button {
     display: inline;
     text-decoration: none;
     margin: 2%;
+}
+
+#user-dropdown {
+    margin: 0 3% 0 0 ;
 }
