@@ -23,6 +23,8 @@ class ProgressionSerializer < ActiveModel::Serializer
     self.object.user.ex_sets.each do |set|
       # arr << nearest_five(set.percentage * base)
       weight = nearest_five(set.percentage * base)
+      # not sure if this line will work, testing
+      weight = 45 unless weight > 45
       arr << { weight: weight, plates: determine_plates(weight, @@plates) }
     end
     arr
