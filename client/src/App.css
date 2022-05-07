@@ -270,7 +270,7 @@ input::-webkit-inner-spin-button {
 } 
 
 #set-form-input {
-    width: 50%;
+    width: 45px;
     background-color: white;
     color:#dc3545;
     border-radius: 0;

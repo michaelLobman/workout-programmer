@@ -17,11 +17,13 @@ The program consists of five four-week phases with specific rep/weight combinati
 
 It all begins with the four main lifts.
 
+More specifically, with how much a user can lift for each of the four main lifts, otherwise known as a one rep maximum.
+
 Most people don't know their one rep maximums, and it can be stressful on your body to attempt a one rep max. Therefore, the application will ask the user to enter the heaviest weight they have successfully lifted for each of the four main exercises as well as the respective number of repetitions completed.
 
 Upon signing up, the application will calculate the user's one rep maxes and use those to generate the weights prescribed for each set of the 20-week workout.
 
-![Signup process](.gif/signup.gif)
+![Signup process](gif/signup.gif)
 
 
 

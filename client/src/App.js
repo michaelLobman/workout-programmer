@@ -28,9 +28,7 @@ function App(){
   }
 
   if (!user) return <Login onLogin={onLogin} />
-  
-  console.log(progressions)
-  
+    
   return (
     <>
       <NavBar user={user} setUser={setUser} />
