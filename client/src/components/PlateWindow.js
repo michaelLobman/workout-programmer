@@ -8,12 +8,12 @@ function PlateWindow({ plates }){
     let renderedPlates; 
 
     if (plates) {
-        const fortyFive = plates[45] ? <ListGroup.Item className="plates-li">45 <i>lbs</i>: {plates[45]}</ListGroup.Item> : null
-        const thirtyFive = plates[35] ? <ListGroup.Item  className="plates-li">35 <i>lbs</i>: {plates[35]}</ListGroup.Item> : null
-        const twentyFive = plates[25] ? <ListGroup.Item  className="plates-li">25 <i>lbs</i>: {plates[25]}</ListGroup.Item> : null
-        const ten = plates[10] ? <ListGroup.Item  className="plates-li">10 <i>lbs</i>: {plates[10]}</ListGroup.Item> : null
-        const five = plates[5] ? <ListGroup.Item  className="plates-li">5 <i>lbs</i>: {plates[5]}</ListGroup.Item> : null
-        const twoHalf = plates[2.5] ? <ListGroup.Item  className="plates-li">2.5 <i>lbs</i>: {plates[2.5]}</ListGroup.Item> : null
+        const fortyFive = plates[45] ? <ListGroup.Item className="plates-li">45 <i>lb</i>: {plates[45]}</ListGroup.Item> : null
+        const thirtyFive = plates[35] ? <ListGroup.Item  className="plates-li">35 <i>lb</i>: {plates[35]}</ListGroup.Item> : null
+        const twentyFive = plates[25] ? <ListGroup.Item  className="plates-li">25 <i>lb</i>: {plates[25]}</ListGroup.Item> : null
+        const ten = plates[10] ? <ListGroup.Item  className="plates-li">10 <i>lb</i>: {plates[10]}</ListGroup.Item> : null
+        const five = plates[5] ? <ListGroup.Item  className="plates-li">5 <i>lb</i>: {plates[5]}</ListGroup.Item> : null
+        const twoHalf = plates[2.5] ? <ListGroup.Item  className="plates-li">2.5 <i>lb</i>: {plates[2.5]}</ListGroup.Item> : null
 
         renderedPlates = (
             <ListGroup>

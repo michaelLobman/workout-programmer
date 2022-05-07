@@ -46,7 +46,7 @@ function LoginForm({ onLogin }){
                     <FloatingLabel
                         controlId="floatingEmail"
                         label="Email"
-                        className="mb-3"
+                        className="mb-3 floater"
                     >
                         <Form.Control 
                             className='form-input'
@@ -59,7 +59,7 @@ function LoginForm({ onLogin }){
                 </Form.Group>
                 <Form.Group className="form-group">
                     <FloatingLabel
-                        controlId="floatingPassword"
+                        controlId="floating-password"
                         label="Password"
                         className="mb-3"
                     >
