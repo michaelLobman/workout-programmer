@@ -4,13 +4,8 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import AsstExItem from './AsstExItem';
 import SetListItem from './SetListItem';
 
-// issue with remaining sets is likely from the ternary not
-// utilizing a state variable
-
 function ExerciseItem({ progression, sets, setProgressions, userId }){
 
-    console.log(progression)
-    
     const {
             exercise, 
             main_ex_id: exId, 

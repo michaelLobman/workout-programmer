@@ -1,24 +1,23 @@
-# README
+# Workout Programmer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Workout Programmer is a custom 20-week workout generator tailored to your current level of fitness.
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+Based on the concepts developed in Jim Wendler's 5-3-1 program, the Workout Programmer centers around four main compound movements: 
 
-* System dependencies
+* Squat
+* Bench Press
+* Deadlift
+* Military Press
 
-* Configuration
+The program consists of five four-week phases with specific rep/weight combinations based on your one rep maximum for each of the four main lifts.
 
-* Database creation
+Most people don't know their one rep maximums, and it can be stressful on your body to attempt a one rep max. Therefore, the application will ask the user to enter the heaviest weight they have successfully lifted for each of the four main exercises as well as the respective number of repetitions completed.
 
-* Database initialization
+Upon signing up, the application will calculate the user's one rep maxes and use those to generate the weights prescribed for each set of the 20-week workout.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
