@@ -124,8 +124,8 @@ Progression.create!([
     {
         main_ex_id: 3,
         user_id: 1,
-        baseline_max: 320,
-        current_max: 320
+        baseline_max: 285,
+        current_max: 285
     },
     {
         main_ex_id: 4,
@@ -156,9 +156,9 @@ AsstEx.create!([
     },
     {
         main_ex_id: 2,
-        title: "DB Bench Press",
+        title: "Pushups",
         sets: 5,
-        reps: 15,
+        reps: 20,
     },
     {
         main_ex_id: 2,
