@@ -37,6 +37,8 @@ class ProgressionSerializer < ActiveModel::Serializer
   end
 
   def determine_plates(weight, plates, plate_hash = {})
+    return nil if weight <= 45
+
     side = (weight.to_f - 45) / 2
 
     if side % plates.first == 0 

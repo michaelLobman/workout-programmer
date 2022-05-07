@@ -15,10 +15,10 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
 
     const {weight, plates } = wP
 
-    const renderPlates = Object.entries(plates).map(entry => (
-        <li key={entry[0]}>{`${entry[0]}: ${entry[1]}`}</li>
+    // const renderPlates = Object.entries(plates).map(entry => (
+    //     <li key={entry[0]}>{`${entry[0]}: ${entry[1]}`}</li>
 
-    ))
+    // ))
     
     const { num, reps, week_id: week } = set
     const toggleClass = completed ? 'completed-class' : null
