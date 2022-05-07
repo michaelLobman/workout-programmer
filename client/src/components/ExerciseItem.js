@@ -5,15 +5,10 @@ import AsstExItem from './AsstExItem';
 import SetListItem from './SetListItem';
 
 function ExerciseItem({ progression, sets, setProgressions, userId }){
-
-
-    // const [reps, setReps] = useState()
-
     const {
             exercise, 
             main_ex_id: exId, 
             current_max: currentMax, 
-            w_max: wMax, 
             id, 
             sets_completed, 
             weights_plates: wP, 
@@ -25,11 +20,10 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
     const renderSets = sets.map(set => (
 
         <SetListItem 
-            key={set.percentage} 
+            key={id} 
             completed={sets_completed} 
             id={id}
             set={set} 
-            wMax={wMax} 
             setProgressions={setProgressions}
             userId={userId}
             exId={exId}
@@ -61,19 +55,3 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
 }
 
 export default ExerciseItem;
-
-
-// return (
-//     <Accordion.Item eventKey={id}>
-//         <Form>
-//             <Accordion.Header className={headerClass}>
-//                 <h2 className="ex-text">{exercise} {numText}</h2>
-//             </Accordion.Header>
-//             <Accordion.Body>
-//                 <ListGroup>
-//                     {renderSets}
-//                 </ListGroup>
-//             </Accordion.Body>
-//         </Form>
-//     </Accordion.Item>
-// )

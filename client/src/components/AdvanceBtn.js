@@ -20,7 +20,7 @@ function AdvanceBtn({ user, setUser, setProgressions }){
                 .then(user => {
                     setUser(user);
                     setProgressions(user.progressions);
-        })
+            })
         }
     }
 

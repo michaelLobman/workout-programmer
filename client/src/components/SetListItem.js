@@ -3,29 +3,20 @@ import { useState } from 'react';
 import PlateWindow from './PlateWindow'
 
 import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
+function SetListItem({ set, completed, setProgressions, id, userId, wP }){
 
     const [completedReps, setCompletedReps] = useState(1);
-
     const {weight, plates } = wP
-
-    // const renderPlates = Object.entries(plates).map(entry => (
-    //     <li key={entry[0]}>{`${entry[0]}: ${entry[1]}`}</li>
-
-    // ))
-    
     const { num, reps, week_id: week } = set
     const toggleClass = completed ? 'completed-class' : null
-
     const amrap = num === 3 && week !== 4 ? '+' : null
-
     const displayForm = num === 3 && week !== 4 ? (
+
         <Form.Group 
             as={Row} 
             className="set-form-group"
@@ -42,9 +33,7 @@ function SetListItem({ set, wMax, completed, setProgressions, id, userId, wP }){
                 />
             </Col>
         </Form.Group>
-
     ) : null
-
 
     function handleSubmit(e){
         e.preventDefault();

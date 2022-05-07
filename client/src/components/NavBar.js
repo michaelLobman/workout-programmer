@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Dropdown from 'react-bootstrap/Dropdown';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from  'react-bootstrap/Navbar';
 
 import { NavLink } from 'react-router-dom';
@@ -18,7 +17,6 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
     const activeStyle = {
         color: "white",
         backgroundColor: "#dc3545"
-        
     }
         
     function handleClick(){
@@ -39,26 +37,6 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
         <Navbar bg='dark' variant='dark'  >
             <Container id='navbar-container'>
                 <Navbar.Brand id="navbar-brand" as={NavLink} to="/">Workout Programmer</Navbar.Brand>
-                {/* <Nav.Link 
-                    disabled={renderNavs} 
-                    as={NavLink} 
-                    style={style}
-                    activeStyle={activeStyle}
-                    exact
-                    to="/"
-                >
-                    Home
-                </Nav.Link>
-                <Nav.Link 
-                    className="navlink"
-                    disabled={renderNavs} 
-                    as={NavLink} 
-                    to="/profile"
-                    style={style}
-                    activeStyle={activeStyle}
-                >
-                    Profile
-                </Nav.Link> */}
                 {user ? (
                      <Dropdown align="end" id="user-dropdown">
                         <Dropdown.Toggle size="lg" variant="outline-danger">{user.name}</Dropdown.Toggle>
@@ -90,7 +68,7 @@ function NavBar({ user, setUser, showLogin, setShowLogin }){
                             </Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
-                ): <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button>
+                ) : <Button variant="outline-danger" onClick={handleClick}>{buttonText}</Button>
             }
             </Container>
         </Navbar>
