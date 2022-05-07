@@ -4,12 +4,18 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import AsstExItem from './AsstExItem';
 import SetListItem from './SetListItem';
 
+// issue with remaining sets is likely from the ternary not
+// utilizing a state variable
+
 function ExerciseItem({ progression, sets, setProgressions, userId }){
+
+    console.log(progression)
+    
     const {
             exercise, 
             main_ex_id: exId, 
             current_max: currentMax, 
-            id, 
+            id,
             sets_completed, 
             weights_plates: wP, 
             asst_exes: asstExes 
@@ -18,9 +24,9 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
     let completed = sets_completed ? 'completed-class' : null
     const numText = sets[2].reps === 1 ? "5 – 3 – 1" : `3 x ${sets[0].reps}`
     const renderSets = sets.map(set => (
-
+        
         <SetListItem 
-            key={id} 
+            key={set.id} 
             completed={sets_completed} 
             id={id}
             set={set} 
