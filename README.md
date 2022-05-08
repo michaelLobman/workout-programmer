@@ -84,6 +84,8 @@ Once the user presses the "Complete" button, the sets/weights for the main exerc
 
 These are a good starting point for the remainder of the day's workout but are decidedly less important than the main exercise for the day.
 
+![Accessory Exercises](gif/accessory.gif)
+
 ### Profile
 
 Accessible via the dropdown menu on the right side of the navigation bar, the user profile showcases the user's progress through the program.
