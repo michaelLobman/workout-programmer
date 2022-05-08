@@ -23,6 +23,8 @@ The program consists of five four-week phases with specific rep/weight combinati
 
 At the end of each four-week phase, the baseline maximum from which the workout weights are derived increases by five pounds for Bench Press and Military Press and ten pounds for Squat and Deadlift.
 
+![Signup process](gif/signup.gif)
+
 ## Usage
 
 ### Signup Process
@@ -32,8 +34,6 @@ It all begins with the four main exercises.
 The application will ask the user to enter the heaviest weight they have successfully lifted for each exercise as well as the respective number of repetitions completed.
 
 Upon signing up, the application will calculate the user's one rep maxes and use those to generate the weights prescribed for each set of the 20-week workout.
-
-![Signup process](gif/signup.gif)
 
 ### Workouts
 
@@ -88,7 +88,7 @@ These are a good starting point for the remainder of the day's workout but are d
 
 Accessible via the dropdown menu on the right side of the navigation bar, the user profile showcases the user's progress through the program.
 
-![User profile](gifs/profile.gif)
+![User profile](gif/profile.gif)
 
 #### Personal Records
 
