@@ -135,7 +135,7 @@ Progression.create!([
     }
 ])
 
-AsstEx.create!([
+AccessoryEx.create!([
     {
         main_ex_id: 1,
         title: "Good Mornings",

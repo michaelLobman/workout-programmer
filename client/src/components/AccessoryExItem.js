@@ -1,12 +1,12 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function AsstExItem({ ex }){
+function AccessoryExItem({ ex }){
 
     return (
-        <ListGroup.Item id="asst-ex-item">
+        <ListGroup.Item id="accessory-ex-item">
             {ex.title}: {ex.sets} x {ex.reps}
         </ListGroup.Item>
     )
 }
 
-export default AsstExItem;
+export default AccessoryExItem;

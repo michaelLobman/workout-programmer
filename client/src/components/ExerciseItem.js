@@ -1,7 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import ListGroup from 'react-bootstrap/ListGroup'
 
-import AsstExItem from './AsstExItem';
+import AccessoryExItem from './AccessoryExItem';
 import SetListItem from './SetListItem';
 
 function ExerciseItem({ progression, sets, setProgressions, userId }){
@@ -13,7 +13,7 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
             id,
             sets_completed, 
             weights_plates: wP, 
-            asst_exes: asstExes 
+            accessory_exes: accessoryExes 
         } = progression
 
     let completed = sets_completed ? 'completed-class' : null
@@ -33,12 +33,12 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
         />
     ))
 
-    const renderAsstExes = asstExes.map(ex => (
-        <AsstExItem ex={ex} key={ex.id} />
+    const renderAccessoryExes = accessoryExes.map(ex => (
+        <AccessoryExItem ex={ex} key={ex.id} />
     ))
 
-    const displaySetsOrAsst = completed ? renderAsstExes : renderSets
-    const renderText = completed ? <h3 id="asst-ex-h3">Assistance Exercises</h3> : null
+    const displaySetsOrAccessory = completed ? renderAccessoryExes : renderSets
+    const renderText = completed ? <h3 id="accessory-ex-h3">Accessory Exercises</h3> : null
 
     return (
         <Accordion.Item eventKey={id}>
@@ -48,7 +48,7 @@ function ExerciseItem({ progression, sets, setProgressions, userId }){
             <Accordion.Body>
                 {renderText}
                 <ListGroup>
-                    {displaySetsOrAsst}
+                    {displaySetsOrAccessory}
                 </ListGroup>
             </Accordion.Body>
         </Accordion.Item>

@@ -1,7 +1,5 @@
 class ProgressionSerializer < ActiveModel::Serializer
-  attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates, :asst_exes
-  # :asst_exes
-
+  attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates, :accessory_exes
   # I believe below line is redundant
 
   belongs_to :main_ex
@@ -13,8 +11,8 @@ class ProgressionSerializer < ActiveModel::Serializer
     self.object.main_ex.title
   end
 
-  def asst_exes
-    self.object.main_ex.asst_exes
+  def accessory_exes
+    self.object.main_ex.accessory_exes
   end
 
   def weights_plates
