@@ -7,6 +7,8 @@ function PlateWindow({ plates }){
 
     let renderedPlates; 
 
+    const triggerArray = [ 'hover','click','focus' ]
+
     if (plates) {
         const fortyFive = plates[45] ? <ListGroup.Item className="plates-li">45 <i>lb</i>: {plates[45]}</ListGroup.Item> : null
         const thirtyFive = plates[35] ? <ListGroup.Item  className="plates-li">35 <i>lb</i>: {plates[35]}</ListGroup.Item> : null
@@ -37,7 +39,7 @@ function PlateWindow({ plates }){
     )
 
     return (
-        <OverlayTrigger trigger="hover" placement="bottom" overlay={popover}>
+        <OverlayTrigger trigger={triggerArray} placement="bottom" overlay={popover}>
             <Button className="plates-btn" variant="danger">View Plates / Side</Button>
         </OverlayTrigger>
     )
