@@ -62,6 +62,8 @@ If the specified weight is 185 *lbs*:
 * 45 *lb*: 1
 * 25 *lb*: 1
 
+![Navigating workout](gif/workout.gif)
+
 #### The Final Set
 
 The final set for every week (with the exception of the deloading week every fourth week) is a maximum-effort set, meaning the user will do as many reps as **safely** possible. 
@@ -70,18 +72,35 @@ The set is designed to be the most difficult and the most rewarding. Enter the n
 
 More on that later...
 
+#### Advancing Weeks
 
-#### Assistance Exercises
+As simple as pressing the green button at the bottom of the page to advance, and the red button to return.
 
-Once the user presses the "Complete" button, the sets/weights for the main exercise are replaced by suggested accessory exercises. The
+![Changing weeks](gif/weeks.gif)
 
+#### Accessory Exercises
 
+Once the user presses the "Complete" button, the sets/weights for the main exercise are replaced by suggested accessory exercises. 
+
+These are a good starting point for the remainder of the day's workout but are decidedly less important than the main exercise for the day.
 
 ### Profile
 
+Accessible via the dropdown menu on the right side of the navigation bar, the user profile showcases the user's progress through the program.
+
+![User profile](gifs/profile.gif)
+
 #### Personal Records
 
+For each of the four main exercises, the profile displays the user's basline personal record upon signup as well as tracks their current personal record as they continue with the workout regimen.
 
+As the last set of a workout (deloading days excluded) features the heaviest weights and calls for as many reps as possible, it follows that personal records will be made on these sets.
 
+Therefore, as detailed earlier, these sets allow the user to enter the number of completed repetitions, which will then be used to calculate the "one rep maximum" achieved.
 
+If that number is greater than the user's current one rep maximum, it will be saved on their profile.
+
+For instance, if a user signs up with their heaviest Bench Press as six reps with 185 *lbs*, their starting personal record would be 220 *lbs*. On week three of the program, the final set will call for the user to Bench Press as many reps as possible with 190 *lbs*.
+
+If the user completes seven reps, their new calculated one rep maximum / personal record would be 240 *lbs* and will be saved to their profile. 
 
