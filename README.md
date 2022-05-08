@@ -2,6 +2,14 @@
 
 Workout Programmer is a custom 20-week workout generator tailored to your current level of fitness.
 
+***
+
+## *Disclaimer*
+
+You should consult your physician or other health care professional before beginning any new fitness regimen. The use of any information provided on this site is solely at your own risk.
+
+***
+
 ## Description
 
 Based on the concepts developed in Jim Wendler's 5-3-1 program, the Workout Programmer centers around four main compound movements: 
@@ -56,9 +64,12 @@ If the specified weight is 185 *lbs*:
 
 #### The Final Set
 
-The final set of every week (with the exception of the deloading week every fourth week)
+The final set for every week (with the exception of the deloading week every fourth week) is a maximum-effort set, meaning the user will do as many reps as **safely** possible. 
 
-more on that later.
+The set is designed to be the most difficult and the most rewarding. Enter the number of reps you have completed and, who knows, you may have even set a new personal record. 
+
+More on that later...
+
 
 #### Accessory Exercises
 

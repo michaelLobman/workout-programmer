@@ -21,10 +21,10 @@ function ExerciseForm({ exercise, exArray }){
                 className="ex-form-group"
                 controlId={`formWeight${exercise.title}`}
             >
-                <Form.Label column sm={2}>Weight:</Form.Label>
-                <Col sm={8}>
+                <Form.Label className="ex-label"column xs={2} sm={2}>Weight:</Form.Label>
+                <Col>
                     <Form.Control
-                        className="ex-input"
+                        className="ex-input weight-input"
                         type="number"
                         pattern="[0-9]*"
                         inputMode="numeric"
@@ -38,10 +38,10 @@ function ExerciseForm({ exercise, exArray }){
                 className="ex-form-group"
                 controlId={`formReps${exercise.title}`}
             >
-                <Form.Label column sm={2}>Reps:</Form.Label>
-                <Col sm={8}>
+                <Form.Label className="ex-label" column xs={2} sm={2}>Reps:</Form.Label>
+                <Col>
                     <Form.Control
-                        className="ex-input"
+                        className="ex-input reps-input"
                         type="number"
                         pattern="[0-9]*"
                         inputMode="numeric"

@@ -37,7 +37,7 @@ function PlateWindow({ plates }){
     )
 
     return (
-        <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
+        <OverlayTrigger trigger="hover" placement="bottom" overlay={popover}>
             <Button className="plates-btn" variant="danger">View Plates / Side</Button>
         </OverlayTrigger>
     )
