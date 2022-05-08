@@ -7,8 +7,6 @@ function PlateWindow({ plates }){
 
     let renderedPlates; 
 
-    const triggerArray = [ 'focus' ]
-
     if (plates) {
         const fortyFive = plates[45] ? <ListGroup.Item className="plates-li">45 <i>lb</i>: {plates[45]}</ListGroup.Item> : null
         const thirtyFive = plates[35] ? <ListGroup.Item  className="plates-li">35 <i>lb</i>: {plates[35]}</ListGroup.Item> : null

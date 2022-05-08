@@ -71,12 +71,9 @@ The set is designed to be the most difficult and the most rewarding. Enter the n
 More on that later...
 
 
-#### Accessory Exercises
+#### Assistance Exercises
 
-
-
-
-
+Once the user presses the "Complete" button, the sets/weights for the main exercise are replaced by suggested accessory exercises. The
 
 
 
