@@ -8,7 +8,7 @@ body {
 }
 
 #intro-container {
-    padding: 5% 0 2% 0 ;
+    padding: 5% 3% 2% 3% ;
 }
 /* form {
     text-align: center;
@@ -43,10 +43,6 @@ body {
     width: 70%;
 }
 
-.form-btn {
-    width: 70%;
-}
-
 .form-input:focus {
     outline: none;
     border: none;
@@ -57,6 +53,8 @@ body {
 
 .ex-input {
     width: 25%;
+    display: inline-flex;
+    margin: 0 2%
 }
 
 label, .label {
@@ -201,17 +199,33 @@ input::-webkit-inner-spin-button {
 }
 
 .form-btn {
+    width: 50%;
+    margin: 3% auto;
+    text-align: center;
+    display: block;
+}
+
+#login-btn {
     width: 70%;
-    margin: 2% 0;
+    margin: 2% auto;
 }
 
 .ex-form-group {
     padding: 2%;
     margin: auto;
+    text-align: center;
 }
 
 #ex-form-h3 {
     padding: 3% 0 0 0;
+    text-align: center;
+}
+
+#ex-form-intro-h3 {
+    color:#dc3545;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
 }
 
 .ex-label {
@@ -234,11 +248,11 @@ input::-webkit-inner-spin-button {
 }
 
 .reps-input {
-    width: 45px;
+    width: 50px;
 }
 
 .weight-input {
-    width:  55px;
+    width:  65px;
 }
 
 
@@ -314,5 +328,20 @@ input::-webkit-inner-spin-button {
 
 .checkbox-group {
     margin:  2% 0;
+    text-align: center;
 }
 
+label.form-check-label {
+    margin: 0 10px;
+}
+
+.ex-checkbox {
+    text-align: center;
+    display: inline-flex;
+}
+
+
+label.ex-label.form-label {
+    margin: 0 2%;
+    display: inline-flex;
+}

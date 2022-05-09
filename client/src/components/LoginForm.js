@@ -73,7 +73,7 @@ function LoginForm({ onLogin }){
                     </FloatingLabel>
                 </Form.Group>
                 <Form.Group className='form-group'>
-                    <Button className='form-btn' type='submit' variant='danger'>Login</Button>
+                    <Button id='login-btn' type='submit' variant='danger'>Login</Button>
                 </Form.Group>
                 <Form.Group className='form-group'>
                     {renderErrors}
