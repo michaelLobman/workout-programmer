@@ -200,17 +200,17 @@ input::-webkit-inner-spin-button {
     padding: 2%;
 }
 
-#continue-btn {
+.form-btn {
     width: 70%;
-    margin: 5% 0;
+    margin: 2% 0;
 }
 
 .ex-form-group {
     padding: 2%;
+    margin: auto;
 }
 
 #ex-form-h3 {
-    text-decoration: underline;
     padding: 3% 0 0 0;
 }
 
@@ -315,3 +315,4 @@ input::-webkit-inner-spin-button {
 .checkbox-group {
     margin:  2% 0;
 }
+
