@@ -13,6 +13,9 @@ function ProfileProgression({ progression, onEdit, userId }){
 	const [displayForm, setDisplayForm] = useState(false);
 	const maxVariant = currentMax !== baselineMax ? "success" : "danger"
 
+	const buttonText = displayForm ? "Hide Form" : "Edit Starting PR"
+	const formVariant = displayForm ? "outline-success" : "success";
+
 	// conditionally render button, which obviously should be in the next level up
 
 	// will probably need to have the setProgressions? to have it update automatically? Trying to think of the bet
@@ -30,7 +33,7 @@ function ProfileProgression({ progression, onEdit, userId }){
 					<ListGroup.Item className="progression-lg-i" variant="info">Starting PR: {baselineMax}</ListGroup.Item>
 					<ListGroup.Item className="progression-lg-i" variant={maxVariant}>Current PR: {currentMax}</ListGroup.Item>
 				</ListGroup>
-				<Button id="edit-button" variant="success" onClick={()=> setDisplayForm(!displayForm)}>Edit Starting PR</Button>
+				<Button id="edit-button" variant={formVariant} onClick={()=> setDisplayForm(!displayForm)}>{buttonText}</Button>
 				{displayForm ? <ProfileEditExForm progression={progression} userId={userId} onEdit={onEdit} /> : null}
 			</Card.Body>
 		</Card>

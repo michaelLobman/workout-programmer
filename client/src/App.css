@@ -180,13 +180,8 @@ input::-webkit-inner-spin-button {
 .progression-card {
     margin: 2%;
     text-align: center;
+    height: 99%;
 }
-
-/* .progression-lg-i {
-    width: 100%;
-    margin: auto;
-} */
-
 
 .plates-li {
     font-size: medium;
@@ -349,6 +344,11 @@ label.ex-label.form-label {
     display: inline-flex;
 }
 
+#edit-button {
+    margin: 6% 0 0 0;
+}
+
 .edit-ex-label {
     color: white;
+    display: block;
 }
