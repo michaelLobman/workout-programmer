@@ -4,11 +4,12 @@ class UsersController < ApplicationController
     def create
         user = User.create!(user_params)
         params[:exercises].each do |exercise|
-            # binding.break
-            ex_id = MainEx.find(exercise[:id]).id
-            max = max(exercise[:weight], exercise[:reps])
-            # add in current max as max - have to make sure this doesn't mess the stats...
-            user.progressions.create!(main_ex_id: ex_id, baseline_max: max, current_max: max)
+            unless exercise[:include] == false
+                ex_id = MainEx.find(exercise[:id]).id
+                max = max(exercise[:weight], exercise[:reps])
+                # add in current max as max - have to make sure this doesn't mess the stats...
+                user.progressions.create!(main_ex_id: ex_id, baseline_max: max, current_max: max)
+            end
         end
         session[:user_id] = user.id
         render json: user, status: :created

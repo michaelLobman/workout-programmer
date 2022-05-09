@@ -311,3 +311,12 @@ input::-webkit-inner-spin-button {
 #navbar-brand {
     margin: 0 0 0 2%;
 }
+
+.ex-button-container {
+    margin:  5% 0;
+    text-align: center;
+    width: 70%;
+}
+.include-ex-button {
+    margin: 10%;
+}
