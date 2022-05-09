@@ -19,14 +19,12 @@ function ExerciseForm({ exercise, exArray }){
     exArray[index].reps = parseInt(reps);
     exArray[index].include = include;
 
-    console.log(include)
-
-
     return (
         <>
             <h3 id="ex-form-h3">{exercise.title}</h3>
-            <Form.Group className="form-group">
+            <Form.Group className="checkbox-group">
                 <Form.Check
+                    className="ex-checkbox"
                     type="checkbox"
                     label="Include in Workout"
                     default="checked"

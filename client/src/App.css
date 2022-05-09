@@ -312,11 +312,6 @@ input::-webkit-inner-spin-button {
     margin: 0 0 0 2%;
 }
 
-.ex-button-container {
-    margin:  5% 0;
-    text-align: center;
-    width: 70%;
-}
-.include-ex-button {
-    margin: 10%;
+.checkbox-group {
+    margin:  2% 0;
 }
