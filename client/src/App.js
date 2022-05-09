@@ -34,7 +34,11 @@ function App(){
       <NavBar user={user} setUser={setUser} />
       <Switch>
         <Route exact path='/profile'>
-          <Profile user={user} progressions={progressions} />
+          <Profile 
+            user={user} 
+            progressions={progressions} 
+            setProgressions={setProgressions}
+          />
         </Route>
         <Route exact path ='/'>
           <Home 

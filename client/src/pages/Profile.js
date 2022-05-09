@@ -5,10 +5,10 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Container from 'react-bootstrap/Container';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-function Profile({ progressions, user }) {
+function Profile({ progressions, setProgressions, user }) {
 
 	const renderedProgressions = progressions.map(progression => (
-		<ProfileProgression key={progression.id} progression={progression} />
+		<ProfileProgression key={progression.id} progression={progression} onEdit={setProgressions} userId={user.id} />
 		))
 	return (
 		<>

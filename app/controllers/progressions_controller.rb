@@ -7,6 +7,14 @@ class ProgressionsController < ApplicationController
         render json: user.progressions.order(main_ex_id: :asc)
     end
 
+    def edit_baseline
+        progression = find_progression
+        max = max(params[:weight], params[:reps])
+        progression.update!(baseline_max: max)
+        user = find_user
+        render json: user.progressions.order(main_ex_id: :asc)
+    end
+
     def update_user_progressions
         progression = find_progression
         user = find_user
