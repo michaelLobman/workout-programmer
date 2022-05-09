@@ -106,3 +106,8 @@ For instance, if a user signs up with their heaviest Bench Press as six reps wit
 
 If the user completes seven reps, their new calculated one rep maximum / personal record would be 240 *lbs* and will be saved to their profile. 
 
+## Support
+
+If you have any questions, issues, or just want to chat, you can email me michael.lobman@gmail.com.
+
+Enjoy your workout!
