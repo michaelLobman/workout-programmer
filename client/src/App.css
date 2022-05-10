@@ -3,20 +3,11 @@ body {
     background-color: rgb(197, 201, 206);
     font-family: 'M PLUS 1', sans-serif;
     font-weight: 500;
-/*    font-size: 1.5vw;
-*/    /* font-family: 'Montserrat', sans-serif; */
 }
-
-
 
 #intro-container {
     padding: 5% 3% 2% 3% ;
 }
-/* form {
-    text-align: center;
-} */
-
-
 
 #progress-panel-div {
     background-color: #dc3545;
@@ -25,16 +16,6 @@ body {
     text-align: center;
     margin: 0;
 }
-
-/* #progress-panel-container {
-    background-color: #dc3545;
-    color: rgb(255, 255, 255);
-    padding: 4% 10%;
-    border-radius: 30px;
-    text-align: center;
-    margin: 5% auto;
-} */
-
 
 .form-input {
     background-color: rgb(197, 201, 206);
@@ -64,10 +45,8 @@ label, .label {
 }
 
 #workout-h2 {
-    /* color: rgb(141, 63, 63); */
     color: #dc3545;
     margin: 1% 0 0 0;
-    /* font-size: 3.5vw; */
 }
 
 .form-container {
@@ -84,8 +63,6 @@ label, .label {
 #navbar-container {
     padding: 1% 0;
 }
-
-
 
 #home-container {
     width: 90%;
@@ -110,20 +87,16 @@ label, .label {
     text-decoration: line-through;
 }
 
-/* is this still needed? I think it's been excised */
-
 .list-form-check {
     margin: 2%;
-/*    font-size: 2vw;
-*/
-
 }
 
-input::-webkit-outer-spin-button,
+/* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
+} */
+
 .ex-text {
    font-size: larger;
 }
@@ -131,8 +104,6 @@ input::-webkit-inner-spin-button {
     font-size: larger;
     display: inline-flex;
 }
-
-
 
 #plate-h3 {
     color:#dc3545;
@@ -143,9 +114,7 @@ input::-webkit-inner-spin-button {
     list-style: none;
     color:#dc3545;
     text-align:center;
-    /* font-size: medium; */
 }
-
 
 #profile-h2 {
     color: white;
@@ -228,7 +197,6 @@ input::-webkit-inner-spin-button {
 
 .ex-label {
     text-align: left;
-
 }
 
 .ex-input {
@@ -253,13 +221,6 @@ input::-webkit-inner-spin-button {
     width:  65px;
 }
 
-
-/* #set-form {
-    text-align: center;
-    margin: auto;
-}
-*/
-
 #rep-container{ 
     margin: auto;
     text-align: center;
@@ -280,7 +241,6 @@ input::-webkit-inner-spin-button {
     background-color: white;
     color:#dc3545;
     border-radius: 0;
-    /* color: #dc3545; */
     border: solid 2px #dc3545;
     text-decoration: none;
     text-align: center;
@@ -316,9 +276,7 @@ input::-webkit-inner-spin-button {
     background-color: #dc3545;
     padding: 2%;
     color: white;
-
 }
-
 
 #navbar-brand {
     margin: 0 0 0 2%;
@@ -337,7 +295,6 @@ label.form-check-label {
     text-align: center;
     display: inline-flex;
 }
-
 
 label.ex-label.form-label {
     margin: 0 2%;
