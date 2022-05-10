@@ -352,3 +352,7 @@ label.ex-label.form-label {
     color: white;
     display: block;
 }
+
+#signup-form {
+    margin: 0 3%;
+}
