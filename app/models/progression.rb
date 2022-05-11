@@ -5,7 +5,6 @@ class Progression < ApplicationRecord
     belongs_to :user
     belongs_to :main_ex
 
-    
     def w_max
         increment = self.main_ex.upper_lower == 'upper' ? 5 : 10
         multiplier = self.user.phase - 1

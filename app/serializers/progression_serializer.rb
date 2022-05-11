@@ -1,6 +1,5 @@
 class ProgressionSerializer < ActiveModel::Serializer
   attributes :id, :exercise, :baseline_max, :current_max, :w_max, :sets_completed, :main_ex_id, :weights_plates, :accessory_exes
-  # I believe below line is redundant
 
   belongs_to :main_ex
 
@@ -19,13 +18,13 @@ class ProgressionSerializer < ActiveModel::Serializer
     base = self.object.w_max
     arr = []
     self.object.user.ex_sets.each do |set|
-      # arr << nearest_five(set.percentage * base)
       weight = nearest_five(set.percentage * base)
-      # not sure if this line will work, testing
       weight = 45 unless weight > 45
       arr << { weight: weight, plates: determine_plates(weight, @@plates) }
     end
+
     arr
+
   end
 
   
@@ -51,6 +50,7 @@ class ProgressionSerializer < ActiveModel::Serializer
     end
 
     determine_plates(weight, plates[1..-1], plate_hash)
+    
 end
 
 end

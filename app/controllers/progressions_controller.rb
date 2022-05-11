@@ -1,5 +1,4 @@
 class ProgressionsController < ApplicationController
-
     skip_before_action :authorize, only: :index_user_progressions
 
     def index_user_progressions
@@ -22,12 +21,6 @@ class ProgressionsController < ApplicationController
         new_max = max(params[:weight], params[:reps])
         progression.update!(current_max: new_max) unless new_max < progression.current_max
         render json: user.progressions.order(main_ex_id: :asc)
-    end
-
-    def update
-        progression = find_progression
-        progression.update!(progression_params)
-        render json: progression
     end
 
     private
