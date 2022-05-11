@@ -37,7 +37,7 @@ body {
 .ex-input {
     width: 25%;
     display: inline-flex;
-    margin: 0 2%
+    margin: 0 2%;
 }
 
 label, .label {
@@ -91,11 +91,11 @@ label, .label {
     margin: 2%;
 }
 
-/* input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-} */
+}
 
 .ex-text {
    font-size: larger;
@@ -219,6 +219,7 @@ input::-webkit-inner-spin-button {
 
 .weight-input {
     width:  65px;
+    text-align: center;
 }
 
 #rep-container{ 
