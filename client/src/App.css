@@ -238,7 +238,7 @@ input::-webkit-inner-spin-button {
 } 
 
 #set-form-input {
-    width: 45px;
+    width: 50px;
     background-color: white;
     color:#dc3545;
     border-radius: 0;

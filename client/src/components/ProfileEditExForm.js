@@ -8,11 +8,14 @@ function ProfileEditExForm({ progression, onEdit, userId }){
     const [weight, setWeight] = useState(100);
 	const [reps, setReps] = useState(1);
 
+    console.log(weight)
+    console.log(reps)
+
     function handleSubmit(e){
         e.preventDefault();
         const progressionObj = {
-            weight,
-            reps
+            weight: parseInt(weight),
+            reps: parseInt(reps)
         }
 
         fetch(`/progressions/user/${userId}/edit_baseline/${progression.id}`, {
