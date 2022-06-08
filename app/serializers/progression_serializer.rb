@@ -3,7 +3,6 @@ class ProgressionSerializer < ActiveModel::Serializer
 
   belongs_to :main_ex
 
-
   @@plates = [45,35,25,10,5, 2.5]
 
   def exercise
@@ -27,8 +26,6 @@ class ProgressionSerializer < ActiveModel::Serializer
 
   end
 
-  
-
   private
 
   def nearest_five (float)
@@ -51,6 +48,6 @@ class ProgressionSerializer < ActiveModel::Serializer
 
     determine_plates(weight, plates[1..-1], plate_hash)
     
-end
+  end
 
 end
